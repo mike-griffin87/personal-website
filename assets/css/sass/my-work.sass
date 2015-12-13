@@ -1,0 +1,50 @@
+/*------ MY WORK ------*/
+
+.work-wrapper
+  width: 100%
+  padding: 25px 0
+  ul
+    flex-flow: wrap
+    width: 100%
+    list-style: none
+    padding: 0
+    margin: 0
+
+.work-item
+  position: relative
+  width: 30%
+  margin: 10px
+  height: 275px
+  border: 1px solid #333
+  cursor: url('../IMG/fa-search-icon.png'), auto
+
+  &:hover
+    .thumb-overlay
+      transform: translate(0%, 0%)
+      opacity: 1
+
+.thumb-overlay
+  position: relative
+  width: 100%
+  height: 100%
+  opacity: 0
+  text-align: center
+  transform: translate(0%, 100%)
+  transition: all .19s ease-in-out
+  background:
+    color: rgba($red,.85)
+
+.thumb-text
+  text-align: center
+  color: white
+  letter-spacing: 1.5px
+  font:
+    weight: 600
+
+.amorae
+  background:
+    color: blue
+    image: url('../IMG/amorae-thumb.jpg')
+    repeat: no-repeat
+    position: center center
+    size: cover
