@@ -4,6 +4,7 @@ var sass        = require('gulp-ruby-sass');
 var browserSync = require('browser-sync');
 var imagemin    = require('gulp-imagemin');
 var autoprefixer = require('gulp-autoprefixer');
+var cp = require('child_process');
 
 
 var messages = {
