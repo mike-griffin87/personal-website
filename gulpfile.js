@@ -49,18 +49,11 @@ gulp.task('imagemin', function(){
     .pipe(imagemin())
     .pipe(gulp.dest('assets/img/'));
 });
-/*
-gulp.task('browser-sync', function() {
-    browserSync.init({
-        server: {
-            baseDir: "./"
-        }
-    });
-});
-*/
+
+
 //compile sass and export as compressed css
 gulp.task('sass', function(){
-  return sass('assets/css/sass/main.sass', {
+  return sass('assets/css/sass/*.sass', {
     style: 'compressed'})
       .on('error', _errorLog)
       .pipe(autoprefixer({
@@ -74,7 +67,7 @@ gulp.task('sass', function(){
 
 //compress js and export to min folder
 gulp.task('scripts', function(){
-  gulp.src('assets/js/main.js')
+  gulp.src('assets/js/*.js')
     .on('error', _errorLog)
     .pipe(uglify())
     .pipe(gulp.dest('assets/js/min'))
@@ -88,4 +81,4 @@ gulp.task('watch', function(){
   gulp.watch(['*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
 });
 
-gulp.task('default', ['scripts', 'watch', 'sass', 'browser-sync', 'imagemin']);
+gulp.task('default', ['scripts', 'watch', 'sass', 'browser-sync']);

@@ -15,8 +15,8 @@
   width: 30%
   margin: 10px
   height: 275px
+  overflow: hidden
   border: 1px solid #333
-  cursor: url('../IMG/fa-search-icon.png'), auto
 
   &:hover
     .thumb-overlay
@@ -31,6 +31,7 @@
   text-align: center
   transform: translate(0%, 100%)
   transition: all .19s ease-in-out
+  cursor: url('/assets/img/fa-search-icon.png'), pointer
   background:
     color: rgba($red,.85)
 
@@ -43,8 +44,7 @@
 
 .amorae
   background:
-    color: blue
-    image: url('../IMG/amorae-thumb.jpg')
+    image: url('/assets/img/amorae-thumb.jpg')
     repeat: no-repeat
     position: center center
     size: cover

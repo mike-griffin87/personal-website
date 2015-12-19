@@ -1,1 +1,1 @@
-$(document).ready(function(){console.log("hello World")});
+$(document).ready(function(){$(".about").on("click",function(){$(".about-container").addClass("show"),$(".content").addClass("content-slide")}),$(".close").on("click",function(){$(".about-container").removeClass("show"),$(".content").removeClass("content-slide")}),$(".about-container").hasClass("show")&&alert("hello world")});
