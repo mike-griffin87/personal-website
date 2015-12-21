@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$red".
-        on line 33 of assets/css/sass/about.sass
+        on line 40 of assets/css/sass/about.sass
 
-28:   color: #fff
-29:   font:
-30:     size: 32px
-31: 
-32:   &:hover
-33:     color: $red
-34: 
-35: .about-image
-36:   width: 100%
-37:   height: 350px
-38:   background:
+35:     size: 30px
+36: 
+37: .resume-button
+38:   cursor: pointer
+39:   background:
+40:     color: $red
+41:   padding: 10px 15px
+42:   border-radius: 5px
+43:   width: 28%
+44:   text-align: center
+45:   color: #fff
 
 Backtrace:
-assets/css/sass/about.sass:33
+assets/css/sass/about.sass:40
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/script/tree/node.rb:50:in `perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:395:in `visit_prop'
@@ -25,11 +25,14 @@ assets/css/sass/about.sass:33
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/stack.rb:115:in `with_frame'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/stack.rb:79:in `with_base'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:431:in `block (2 levels) in visit_rule'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:431:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:431:in `block in visit_rule'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:52:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:429:in `visit_rule'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:398:in `visit_prop'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:36:in `visit'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/stack.rb:79:in `block in with_base'
@@ -77,4 +80,4 @@ assets/css/sass/about.sass:33
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$red\".\A         on line 33 of assets/css/sass/about.sass\A \A 28:   color: #fff\A 29:   font:\A 30:     size: 32px\A 31: \A 32:   &:hover\A 33:     color: $red\A 34: \A 35: .about-image\A 36:   width: 100%\A 37:   height: 350px\A 38:   background:"; }
+  content: "Error: Undefined variable: \"$red\".\A         on line 40 of assets/css/sass/about.sass\A \A 35:     size: 30px\A 36: \A 37: .resume-button\A 38:   cursor: pointer\A 39:   background:\A 40:     color: $red\A 41:   padding: 10px 15px\A 42:   border-radius: 5px\A 43:   width: 28%\A 44:   text-align: center\A 45:   color: #fff"; }
