@@ -54,7 +54,7 @@ gulp.task('imagemin', function(){
 //compile sass and export as compressed css
 gulp.task('sass', function(){
   return sass('assets/css/sass/*.sass', {
-    style: 'compressed'})
+    style: 'nested'})
       .on('error', _errorLog)
       .pipe(autoprefixer({
 			browsers: ['last 2 versions'],
