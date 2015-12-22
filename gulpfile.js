@@ -53,8 +53,8 @@ gulp.task('imagemin', function(){
 
 //compile sass and export as compressed css
 gulp.task('sass', function(){
-  return sass('assets/css/sass/*.sass', {
-    style: 'nested'})
+  return sass('assets/css/sass/main.sass', {
+    style: 'compressed'})
       .on('error', _errorLog)
       .pipe(autoprefixer({
 			browsers: ['last 2 versions'],
@@ -71,13 +71,13 @@ gulp.task('scripts', function(){
     .on('error', _errorLog)
     .pipe(uglify())
     .pipe(gulp.dest('assets/js/min'))
-    .pipe(browserSync.stream());
+    .pipe(browserSync.reload());
 });
 
 //watch files for changes
 gulp.task('watch', function(){
   gulp.watch('assets/js/main.js',['scripts']);
-  gulp.watch('assets/css/sass/*.sass',['sass']);
+  gulp.watch(['assets/css/sass/*.sass', 'assets/css/sass/*.scss'],['sass']);
   gulp.watch(['*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
 });
 
