@@ -6,7 +6,6 @@
   "dependencies": {
     "browser-sync": "^2.10.0",
     "gulp-autoprefixer": "^3.1.0",
-    "childprocess": "^2.0.0",
     "gulp": "^3.9.0",
     "gulp-imagemin": "^2.4.0",
     "gulp-livereload": "^3.8.1",
