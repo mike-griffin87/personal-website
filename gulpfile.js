@@ -7,23 +7,18 @@ var autoprefixer = require('gulp-autoprefixer');
 var cp           = require('child_process');
 
 
-
 var messages = {
   jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
 };
 
-/**
- * Build the Jekyll Site
- */
+// Build the Jekyll Site
 gulp.task('jekyll-build', function (done) {
   browserSync.notify(messages.jekyllBuild);
   return cp.spawn('jekyll', ['build'], {stdio: 'inherit'})
     .on('close', done);
 });
 
-/**
- * Rebuild Jekyll & do page reload
- */
+// Rebuild Jekyll & do page reload
 gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
   browserSync.reload();
 });
@@ -34,11 +29,11 @@ gulp.task('imagemin', function(){
     .pipe(gulp.dest('assets/img/'));
 });
 
-//compile sass and export as compressed css
+// compile sass and export as compressed css
 gulp.task('sass', function(){
   return sass('assets/css/sass/main.sass', {
     style: 'compressed'})
-      .on('error', _errorLog)
+      .on('error', errorLog)
       .pipe(autoprefixer({
 			browsers: ['last 2 versions'],
 			cascade: false
@@ -48,15 +43,15 @@ gulp.task('sass', function(){
       .pipe(browserSync.stream());
 });
 
-//compress js and export to min folder
+// compress js and export to min folder
 gulp.task('js', function(){
   gulp.src('assets/js/*.js')
-    .on('error', _errorLog)
+    .on('error', errorLog)
     .pipe(uglify())
     .pipe(gulp.dest('assets/js/min'));
 });
 
-gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
+gulp.task('serve', ['js', 'sass', 'jekyll-build'], function() {
   browserSync({
     server: {
       baseDir: '_site'
@@ -68,9 +63,9 @@ gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
   gulp.watch(['*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
 });
 
-gulp.task('default', ['js', 'watch', 'sass', 'browser-sync']);
+gulp.task('default', ['serve']);
 
-function _errorLog(error){
-  console.error.bind(error);
-  $this.emit('end');
+function errorLog(error){
+  console.log(error.toString()); //Prints Error to Console
+  this.emit('end'); //End function
 }
