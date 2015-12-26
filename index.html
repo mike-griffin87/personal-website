@@ -2,21 +2,42 @@
 layout: default
 ---
 
-<img src="" alt="">
-
+<div class="text"></div>
 <div class="work-wrapper">
 
+  <div class="large-image-container"></div>
+  <div class="work-text-container">
+
+{% for work text content.data.work-section %}
+
+  <span class="heading"><h1>{{ work.title }}</h1></span>
+  <span class="tags">tags: one | two | three</span>
+  <span class="main-content"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis nisi voluptate dolor hic enim quaerat, asperiores, odio non amet cum sed facilis numquam voluptatem. Ipsa neque, sequi illo vel unde.</p></span>
+
+
+  </div>
+
+
   <ul class="flex row flex-center">
-    <li class="work-item amorae">
-      <div class="thumb-overlay flex flex-center">
-        <div class="thumb-text">AMORAE BRIDAL</div>
-      </div>
 
-    </li>
+<li class="work-item amorae">
+  <div class="overlay">
+    <span class="work-item-caption flex flex-center column">
+      <h1>Amorae Bridal</h1>
+      <p>Web Design & development</p>
+    </span>
+  </div>
+</li>
 
-    <li class="work-item">
-      <div class="overlay"></div>
-    </li>
+<li class="work-item new">
+  <div class="overlay">
+    <span class="work-item-caption flex flex-center column">
+      <h1>Amorae Bridal</h1>
+      <p>Web Design & development</p>
+    </span>
+  </div>
+</li>
+
     <li class="work-item"></li>
     <li class="work-item"></li>
     <li class="work-item"></li>
@@ -25,5 +46,12 @@ layout: default
     <li class="work-item"></li>
     <li class="work-item"></li>
   </ul>
+
+</div>
+
+<div class="work-text-group">
+
+<div class="amorae-text"></div>
+
 
 </div>

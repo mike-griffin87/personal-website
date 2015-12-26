@@ -283,34 +283,95 @@ ul {
   height: 275px;
   overflow: hidden;
   border: 1px solid #333; }
-  .work-item:hover .thumb-overlay {
+  .work-item:hover .overlay, .work-item:hover .work-item-caption h1, .work-item:hover .work-item-caption p {
     -webkit-transform: translate(0%, 0%);
     transform: translate(0%, 0%);
     opacity: 1; }
-
-.thumb-overlay {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  text-align: center;
-  -webkit-transform: translate(0%, 100%);
-  transform: translate(0%, 100%);
-  transition: all .19s ease-in-out;
-  cursor: url("/assets/img/fa-search-icon.png"), pointer;
-  background-color: rgba(231, 76, 60, 0.85); }
-
-.thumb-text {
-  text-align: center;
-  color: white;
-  letter-spacing: 1.5px;
-  font-weight: 600; }
+  .work-item img {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    float: left;
+    z-index: 4;
+    min-height: 275px;
+    min-width: 366px; }
+  .work-item .overlay {
+    width: 100%;
+    height: 100%;
+    cursor: url("../img/fa-search-icon.png"), pointer;
+    position: absolute;
+    z-index: 5;
+    opacity: 0;
+    -webkit-transform: translate(0%, 100%);
+    transform: translate(0%, 100%);
+    transition: all 0.25s ease;
+    background-color: rgba(231, 76, 60, 0.85); }
 
 .amorae {
-  background-image: url("/assets/img/amorae-thumb.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover; }
+  background-image: url("../img/amorae-thumb.jpg");
+  background-size: cover;
+  background-position: center center; }
+
+.new {
+  background-image: url("https://cdn.photographylife.com/wp-content/uploads/2014/06/Nikon-D810-Image-Sample-6.jpg");
+  background-size: cover;
+  background-position: center center; }
+
+.work-item-caption {
+  position: relative;
+  padding: 100px 0 0 0; }
+  .work-item-caption h1 {
+    color: #eee;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    text-transform: uppercase;
+    transition: all 0.25s ease-in-out;
+    transition-delay: 0.18s;
+    -webkit-transform: translate(-20%, 0%);
+    transform: translate(-20%, 0%);
+    font-family: "open_sansextrabold"; }
+  .work-item-caption p {
+    color: #eee;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    text-transform: uppercase;
+    transition: all 0.25s ease-in-out;
+    transition-delay: 0.18s;
+    -webkit-transform: translate(20%, 0%);
+    transform: translate(20%, 0%);
+    font-size: 16px;
+    font-weight: 300; }
+
+.large-image-container {
+  display: none;
+  width: 65%;
+  height: 100vh;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: green;
+  background-size: cover;
+  background-position: center center; }
+  .large-image-container img {
+    width: 100%;
+    height: auto; }
+
+.work-text-container {
+  display: none;
+  width: 35%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  background-color: #e74c3c; }
+
+.show-image {
+  display: block !important; }
 
 .top-section {
   margin-top: 25px; }
@@ -408,7 +469,7 @@ hr {
 .about-image {
   width: 100%;
   height: 350px;
-  background-image: url("/assets/img/mike-portfolio-image.jpg");
+  background-image: url("../img/mike-portfolio-image.jpg");
   background-size: cover;
   background-position: center center; }
   .about-image ul {
@@ -442,7 +503,8 @@ hr {
   .about-panel-overlay.show {
     pointer-events: auto;
     transition: all .2s ease-in-out;
-    opacity: 1; }
+    opacity: 1;
+    display: block !important; }
 
 .fa-dribbble:hover {
   color: #ea4c89; }
