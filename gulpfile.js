@@ -58,9 +58,9 @@ gulp.task('serve', ['js', 'sass', 'jekyll-build'], function() {
     }
   });
 
-  gulp.watch('assets/js/main.js',['scripts']);
-  gulp.watch(['assets/css/sass/*.sass', 'assets/css/sass/*.scss'],['sass']);
-  gulp.watch(['*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
+  gulp.watch('assets/js/main.js', ['js']);
+  gulp.watch(['assets/css/sass/*.sass', 'assets/css/sass/*.scss'], ['sass']);
+  gulp.watch(['*.html', '_layouts/*.html', '_posts/*', 'assets/js/min/*.js'], ['jekyll-rebuild']);
 });
 
 gulp.task('default', ['serve']);
