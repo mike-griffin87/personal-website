@@ -1,86 +1,74 @@
-var gulp        = require('gulp');
-var uglify      = require('gulp-uglify');
-var sass        = require('gulp-ruby-sass');
-var browserSync = require('browser-sync');
-var imagemin    = require('gulp-imagemin');
+var gulp         = require('gulp');
+var uglify       = require('gulp-uglify');
+var sass         = require('gulp-sass');
+var browserSync  = require('browser-sync');
+var imagemin     = require('gulp-imagemin');
 var autoprefixer = require('gulp-autoprefixer');
-var cp = require('child_process');
+var cp           = require('child_process');
+var notify       = require('gulp-notify');
+var plumber      = require('gulp-plumber');
 
+var jekyll = (process.platform === "win32" ? "jekyll.bat" : "jekyll");
 
 var messages = {
-    jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
+  jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
 };
 
-/**
- * Build the Jekyll Site
- */
+// Build the Jekyll Site
 gulp.task('jekyll-build', function (done) {
-    browserSync.notify(messages.jekyllBuild);
-    return cp.spawn('jekyll', ['build'], {stdio: 'inherit'})
-        .on('close', done);
+  browserSync.notify(messages.jekyllBuild);
+  return cp.spawn(jekyll, ['build'], {stdio: 'inherit'})
+    .on('close', done)
+    .on('error', errorAlert);
 });
 
-/**
- * Rebuild Jekyll & do page reload
- */
+// Rebuild Jekyll & do page reload
 gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
-    browserSync.reload();
+  browserSync.reload();
 });
-
-/**
- * Wait for jekyll-build, then launch the Server
- */
-gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
-    browserSync({
-        server: {
-            baseDir: '_site'
-        }
-    });
-});
-
-function _errorLog(error){
-  console.error.bind(error);
-  $this.emit('end');
-}
-
 
 gulp.task('imagemin', function(){
-  gulp.src('assets/img/*')
+  return gulp.src('assets/img/*')
+    .pipe(plumber({errorHandler: errorAlert}))
     .pipe(imagemin())
     .pipe(gulp.dest('assets/img/'));
 });
 
-
-//compile sass and export as compressed css
+// compile sass and export as compressed css
 gulp.task('sass', function(){
-  return sass('assets/css/sass/main.sass', {
-    style: 'nested'})
-      .on('error', _errorLog)
-      .pipe(autoprefixer({
-			browsers: ['last 2 versions'],
-			cascade: false
-		}))
-      .pipe(gulp.dest('_site/assets/css'))
-      .pipe(gulp.dest('assets/css'))
-      .pipe(browserSync.stream());
+  return gulp.src('assets/css/sass/main.sass')
+    .pipe(plumber({errorHandler: errorAlert}))
+    .pipe(sass({ outputStyle: 'nested' }))
+    .pipe(autoprefixer({ browsers: ['last 2 versions'], cascade: false }))
+    .pipe(gulp.dest('_site/assets/css'))
+    .pipe(gulp.dest('assets/css'))
+    .pipe(browserSync.stream());
 });
 
-//compress js and export to min folder
-gulp.task('scripts', function(){
-  gulp.src('assets/js/*.js')
-    .on('error', _errorLog)
-//    .pipe(uglify())
+// compress js and export to min folder
+gulp.task('js', function(){
+  return gulp.src('assets/js/*.js')
+    .pipe(plumber({errorHandler: errorAlert}))
+    .pipe(uglify())
     .pipe(gulp.dest('assets/js/min'));
 });
 
-gulp.task('js-watch', ['scripts'], browserSync.reload);
+gulp.task('serve', ['js', 'sass', 'jekyll-build'], function() {
+  browserSync({
+    server: {
+      baseDir: '_site'
+    }
+  });
 
-
-//watch files for changes
-gulp.task('watch', function(){
-  gulp.watch('assets/js/main.js',['js-watch']);
-  gulp.watch(['assets/css/sass/*.sass', 'assets/css/sass/*.scss'],['sass']);
-  gulp.watch(['*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
+  gulp.watch('assets/js/main.js', ['js']);
+  gulp.watch(['assets/css/sass/*.sass', 'assets/css/sass/*.scss'], ['sass']);
+  gulp.watch(['*.html', '_layouts/*.html', '_posts/*', 'assets/js/min/*.js'], ['jekyll-rebuild']);
 });
 
-gulp.task('default', ['scripts', 'watch', 'sass', 'browser-sync']);
+gulp.task('default', ['serve']);
+
+function errorAlert(error){
+  notify.onError({title: "Gulp Error", message: "Beep beep beep, stuffs going down. Check the console.", sound: true})(error); //Error Notification
+  console.log(error.toString()); //Prints Error to Console
+  this.emit('end'); //End function
+}

@@ -1,8 +1,9 @@
 $(document).ready(function(){
 
   console.log("ready");
+});
 
-  $('.about').on('click', function(){
+/*  $('.about').on('click', function(){
     $('.about-container, .about-panel-overlay').addClass('show');
   });
 
@@ -26,4 +27,4 @@ $(document).ready(function(){
 
   });
 
-});
+});*/
