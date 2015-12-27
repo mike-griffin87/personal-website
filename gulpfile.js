@@ -5,6 +5,7 @@ var browserSync  = require('browser-sync');
 var imagemin     = require('gulp-imagemin');
 var autoprefixer = require('gulp-autoprefixer');
 var cp           = require('child_process');
+var notify       = require('gulp-notify');
 
 var jekyll = (process.platform === "win32" ? "jekyll.bat" : "jekyll");
 
@@ -64,6 +65,7 @@ gulp.task('serve', ['js', 'sass', 'jekyll-build'], function() {
 gulp.task('default', ['serve']);
 
 function errorLog(error){
+  notify.onError({title: "Gulp Error", message: "Beep beep beep, stuffs going down. Check the console.", sound: true})(error); //Error Notification
   console.log(error.toString()); //Prints Error to Console
   this.emit('end'); //End function
 }
