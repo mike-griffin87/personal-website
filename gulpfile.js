@@ -1,6 +1,6 @@
 var gulp         = require('gulp');
 var uglify       = require('gulp-uglify');
-var sass         = require('gulp-ruby-sass');
+var sass         = require('gulp-sass');
 var browserSync  = require('browser-sync');
 var imagemin     = require('gulp-imagemin');
 var autoprefixer = require('gulp-autoprefixer');
@@ -31,16 +31,13 @@ gulp.task('imagemin', function(){
 
 // compile sass and export as compressed css
 gulp.task('sass', function(){
-  return sass('assets/css/sass/main.sass', {
-    style: 'compressed'})
-      .on('error', errorLog)
-      .pipe(autoprefixer({
-			browsers: ['last 2 versions'],
-			cascade: false
-		}))
-      .pipe(gulp.dest('_site/assets/css'))
-      .pipe(gulp.dest('assets/css'))
-      .pipe(browserSync.stream());
+  return gulp.src('assets/css/sass/main.sass')
+    .on('error', errorLog)
+    .pipe(sass({ outputStyle: 'compressed' }))
+    .pipe(autoprefixer({ browsers: ['last 2 versions'], cascade: false }))
+    .pipe(gulp.dest('_site/assets/css'))
+    .pipe(gulp.dest('assets/css'))
+    .pipe(browserSync.stream());
 });
 
 // compress js and export to min folder
