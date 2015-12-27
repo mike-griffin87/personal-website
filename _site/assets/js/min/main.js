@@ -1,1 +1,1 @@
-$(document).ready(function(){$(".about").on("click",function(){$(".about-container, .about-panel-overlay").addClass("show")}),$(".close").on("click",function(){$(".about-container, .about-panel-overlay").removeClass("show")}),$(".about-panel-overlay").on("click",function(){$(".about-container, .about-panel-overlay").removeClass("show")})});
+$(document).ready(function(){console.log("ready")});

@@ -18,33 +18,102 @@
   overflow: hidden
   border: 1px solid #333
 
-  &:hover
-    .thumb-overlay
-      transform: translate(0%, 0%)
-      opacity: 1
+  &:hover .overlay,
+  &:hover .work-item-caption h1,
+  &:hover .work-item-caption p
+    transform: translate(0%, 0%)
+    opacity: 1
 
-.thumb-overlay
-  position: relative
-  width: 100%
-  height: 100%
-  opacity: 0
-  text-align: center
-  transform: translate(0%, 100%)
-  transition: all .19s ease-in-out
-  cursor: url('/assets/img/fa-search-icon.png'), pointer
-  background:
-    color: rgba($red,.85)
+  img
+    position: absolute
+    margin: 0
+    padding: 0
+    float: left
+    z-index: 4
+    min-height: 275px
+    min-width: 366px
 
-.thumb-text
-  text-align: center
-  color: white
-  letter-spacing: 1.5px
-  font:
-    weight: 600
+
+  .overlay
+    width: 100%
+    height: 100%
+    cursor: url('../img/fa-search-icon.png'), pointer
+    position: absolute
+    z-index: 5
+    opacity: 0
+    transform: translate(0%, 100%)
+    transition: all .25s ease
+    background:
+      color: rgba($red,.85)
 
 .amorae
   background:
-    image: url('/assets/img/amorae-thumb.jpg')
-    repeat: no-repeat
-    position: center center
+    image: url('../img/amorae-thumb.jpg')
     size: cover
+    position: center center
+
+.new
+  background:
+    image: url('https://cdn.photographylife.com/wp-content/uploads/2014/06/Nikon-D810-Image-Sample-6.jpg')
+    size: cover
+    position: center center
+
+.work-item-caption
+  position: relative
+  padding: 100px 0 0 0
+
+  h1
+    color: #eee
+    margin: 0
+    padding: 0
+    opacity: 0
+    text-transform: uppercase
+    transition: all .25s ease-in-out
+    transition-delay: .18s
+    transform: translate(-20%, 0%)
+    font:
+      family: 'open_sansextrabold'
+  p
+    color: #eee
+    margin: 0
+    padding: 0
+    opacity: 0
+    text-transform: uppercase
+    transition: all .25s ease-in-out
+    transition-delay: .18s
+    transform: translate(20%, 0%)
+    font:
+      size: 16px
+      weight: 300
+
+.large-image-container
+  display: none
+  width: 65%
+  height: 100vh
+  position: fixed
+  overflow: hidden
+  top: 0
+  left: 0
+  z-index: 10
+  background:
+    color: green
+    size: cover
+    position: center center
+
+  img
+    width: 100%
+    height: auto
+
+.work-text-container
+  display: none
+  width: 35%
+  height: 100vh
+  position: fixed
+  top: 0
+  right: 0
+  z-index: 2
+  background:
+    color: $red
+
+.show-image
+  display: block!important
