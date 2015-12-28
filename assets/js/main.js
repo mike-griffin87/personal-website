@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+  alert("hello");
+
   console.log("ready");
 
   $('.about').on('click', function(){
