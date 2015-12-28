@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 $(document).ready(function(){
 
   alert("hello");
@@ -29,3 +30,6 @@ $(document).ready(function(){
   });
 
 });
+=======
+$(document).ready(function(){console.log("ready")});
+>>>>>>> c617eaef21fc2a2029495a73dd57b4aedbd9f205

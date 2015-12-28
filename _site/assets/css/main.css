@@ -4,18 +4,21 @@
   src: url("../fonts/OpenSans-ExtraBold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-ExtraBold-webfont.woff") format("woff"), url("../fonts/OpenSans-ExtraBold-webfont.ttf") format("truetype"), url("../fonts/OpenSans-ExtraBold-webfont.svg#open_sansextrabold") format("svg");
   font-weight: normal;
   font-style: normal; }
+
 @font-face {
   font-family: 'slab_serifregular';
   src: url("../fonts/slab-serif-regular-webfont.eot");
   src: url("../fonts/slab-serif-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/slab-serif-regular-webfont.woff2") format("woff2"), url("../fonts/slab-serif-regular-webfont.woff") format("woff"), url("../fonts/slab-serif-regular-webfont.ttf") format("truetype"), url("../fonts/slab-serif-regular-webfont.svg#slab_serifregular") format("svg");
   font-weight: normal;
   font-style: normal; }
+
 @font-face {
   font-family: 'open_sanslight';
   src: url("../fonts/OpenSans-Light-webfont.eot");
   src: url("../fonts/OpenSans-Light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Light-webfont.woff") format("woff"), url("../fonts/OpenSans-Light-webfont.ttf") format("truetype"), url("../fonts/OpenSans-Light-webfont.svg#open_sanslight") format("svg");
   font-weight: normal;
   font-style: normal; }
+
 /*!
  *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -28,6 +31,7 @@
   src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.5.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.5.0") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.5.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.5.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
+
 .fa {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
@@ -121,6 +125,7 @@
   100% {
     -webkit-transform: rotate(359deg);
     transform: rotate(359deg); } }
+
 @keyframes fa-spin {
   0% {
     -webkit-transform: rotate(0deg);
@@ -128,6 +133,7 @@
   100% {
     -webkit-transform: rotate(359deg);
     transform: rotate(359deg); } }
+
 .fa-rotate-90 {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
   -webkit-transform: rotate(90deg);
@@ -209,15 +215,15 @@
   content: '\f00d'; }
 
 body {
-  font-family: "open_sanslight"; }
+  font-family: 'open_sanslight'; }
 
 p {
-  font-family: "open_sanslight";
+  font-family: 'open_sanslight';
   font-size: 15px;
   font-color: #666; }
 
 .top-section h1 {
-  font-family: "slab_serifregular";
+  font-family: 'slab_serifregular';
   font-size: 50px;
   color: #333;
   margin: 0;
@@ -238,7 +244,7 @@ ul {
 .content-slide {
   margin-right: 50%; }
 
-/*-------- FLEX STYLES -------- */
+/*-------- FLEX STYLES --------*/
 .flex {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -262,8 +268,8 @@ ul {
   -ms-flex-pack: center;
   justify-content: center; }
 
-/*-------- END FLEX STYLES -------- */
-/*------ MY WORK ------ */
+/*-------- END FLEX STYLES --------*/
+/*------ MY WORK ------*/
 .work-wrapper {
   width: 100%;
   padding: 25px 0; }
@@ -283,7 +289,9 @@ ul {
   height: 275px;
   overflow: hidden;
   border: 1px solid #333; }
-  .work-item:hover .overlay, .work-item:hover .work-item-caption h1, .work-item:hover .work-item-caption p {
+  .work-item:hover .overlay,
+  .work-item:hover .work-item-caption h1,
+  .work-item:hover .work-item-caption p {
     -webkit-transform: translate(0%, 0%);
     transform: translate(0%, 0%);
     opacity: 1; }
@@ -304,7 +312,7 @@ ul {
     opacity: 0;
     -webkit-transform: translate(0%, 100%);
     transform: translate(0%, 100%);
-    transition: all 0.25s ease;
+    transition: all .25s ease;
     background-color: rgba(231, 76, 60, 0.85); }
 
 .amorae {
@@ -326,19 +334,19 @@ ul {
     padding: 0;
     opacity: 0;
     text-transform: uppercase;
-    transition: all 0.25s ease-in-out;
-    transition-delay: 0.18s;
+    transition: all .25s ease-in-out;
+    transition-delay: .18s;
     -webkit-transform: translate(-20%, 0%);
     transform: translate(-20%, 0%);
-    font-family: "open_sansextrabold"; }
+    font-family: 'open_sansextrabold'; }
   .work-item-caption p {
     color: #eee;
     margin: 0;
     padding: 0;
     opacity: 0;
     text-transform: uppercase;
-    transition: all 0.25s ease-in-out;
-    transition-delay: 0.18s;
+    transition: all .25s ease-in-out;
+    transition-delay: .18s;
     -webkit-transform: translate(20%, 0%);
     transform: translate(20%, 0%);
     font-size: 16px;
@@ -442,7 +450,7 @@ hr {
     opacity: 1; }
 
 .about-text {
-  font-family: "open_sansextrabold";
+  font-family: 'open_sansextrabold';
   margin: 0;
   padding: 0;
   color: #333;
