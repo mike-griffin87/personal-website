@@ -362,13 +362,22 @@ ul {
 
 .work-text-container {
   display: none;
+  text-align: center;
+  color: #fff;
   width: 35%;
   height: 100vh;
   position: fixed;
   top: 0;
   right: 0;
   z-index: 2;
-  background-color: #e74c3c; }
+  background-color: #e74c3c;
+  margin: 0;
+  padding: 0; }
+  .work-text-container h4 {
+    margin: 0;
+    padding: 0; }
+  .work-text-container p {
+    padding: 5px 25px; }
 
 .show-image {
   display: block !important; }
