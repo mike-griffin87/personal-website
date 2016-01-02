@@ -7,16 +7,24 @@ layout: default
 
   <div class="large-image-container"></div>
   <div class="work-text-container">
-    {% for text in .site.data.workcontent %}
-      <span class="heading"><h1>{{text.title [1]}}</h1></span>
-      <span class="tags"><h4>{{text.tags [1]}}</h4></span>
-      <span class="main-content"><p>{{text.content [1]}}</p></span>
-    {% endfor %}
-      </div>
+    <div class="close-work-large-container fa fa-times"></div>
+    <div class="project-text"></div>
+    <div class="next-prev-project-buttons flex flex-center row">
+      <div class="project-buttons prev-button">Previous Project</div>
+      <div class="project-buttons next-button">Next Project</div>
+    </div>
+  </div>
 
   <ul class="flex row flex-center">
 
-<li class="work-item amorae">
+<li class="work-item" id="amorae">
+  <div class="work-item-text">
+    {% for amorae in .site.data.amorae-content %}
+      <span class="heading"><h1>{{amorae.title}}</h1></span>
+      <span class="tags"><h4>{{amorae.role}}</h4></span>
+      <span class="main-content"><p>{{amorae.content}}</p></span>
+    {% endfor %}
+  </div>
   <div class="overlay">
     <span class="work-item-caption flex flex-center column">
       <h1>Amorae Bridal</h1>
@@ -25,11 +33,18 @@ layout: default
   </div>
 </li>
 
-<li class="work-item new">
+<li class="work-item" id="new">
+  <div class="work-item-text">
+    {% for new in .site.data.new-content %}
+      <span class="heading"><h1>{{new.title}}</h1></span>
+      <span class="tags"><h4>Tags: {{new.tags}}</h4></span>
+      <span class="main-content"><p>{{new.content}}</p></span>
+    {% endfor %}
+  </div>
   <div class="overlay">
     <span class="work-item-caption flex flex-center column">
-      <h1>Amorae Bridal</h1>
-      <p>Web Design & development</p>
+      <h1>New Project</h1>
+      <p>Print Design</p>
     </span>
   </div>
 </li>
