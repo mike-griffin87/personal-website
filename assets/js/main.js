@@ -1,17 +1,20 @@
-
 $(document).ready(function(){
 
+// OPEN ABOUT PANEL & ADD NO SCROLL/OVERLAY
   $('.about').on('click', function(){
     $('.about-container, .about-panel-overlay').addClass('show');
-    _currentWorkItems();
+    $('body').addClass('no-scroll');
   });
 
-  $('.close').on('click', function(){
-    $('.about-container, .about-panel-overlay').removeClass('show');
+// CLOSE ABOUT PANEL & REMOVE NO SCROLL/OVERLAY
+  $('.close, .about-panel-overlay').on('click', function(){
+    $('.about-container, .about-panel-overlay, .contact-section').removeClass('show');
+    $('body').removeClass('no-scroll');
   });
 
-  $('.about-panel-overlay').on('click', function(){
-    $('.about-container, .about-panel-overlay').removeClass('show');
+// OPEN CONTACT PANEL & ADD NO SCROLL/OVERLAY
+  $('.contact').on('click', function (){
+    $('.contact-section, .about-panel-overlay').addClass('show');
   });
 
 
@@ -19,8 +22,10 @@ $(document).ready(function(){
   $('.work-item').on('click', function(){
     var _myWorkImage = ($(this).css('background-image'));
     var _workItemText = ($(this).find('.work-item-text'));
+//next project
     var _CurrentWorkItem = $(this).attr('class');
     var _next = $(_CurrentWorkItem).hide().next('.work-item');
+//end next project
 
     $('.project-text').append(_workItemText.html());
 
@@ -28,14 +33,14 @@ $(document).ready(function(){
     $('.work-text-container').addClass('show-work-item-text');
     $('.large-image-container').css('background-image', _myWorkImage);
 
-    //Click on next project button
+//next project
       $('.next-button').on('click', function(){
       console.log(_CurrentWorkItem);
       });
-
+//end next project
   });
 
-  //Close large image view and remove appended html
+// CLOSE LARGE IMAGE VIEW AND REMOVE APPENDED HTML
   $('.close-work-large-container').on('click', function(){
     $('.large-image-container').removeClass('show-large-image');
     $('.work-text-container').removeClass('show-work-item-text');
