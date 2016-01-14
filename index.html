@@ -5,64 +5,38 @@ layout: default
 <div class="text"></div>
 <div class="work-wrapper">
 
-  <div class="large-image-container"></div>
+  <div class="large-image-container">
+    <div class="close-mobile-work-image fa fa-times"></div>
+  </div>
+
   <div class="work-text-container">
     <div class="close-work-large-container fa fa-times"></div>
     <div class="project-text"></div>
     <div class="next-prev-project-buttons flex flex-center row">
-      <div class="project-buttons prev-button">Previous Project</div>
-      <div class="project-buttons next-button">Next Project</div>
+      <span class="project-buttons prev-button">Previous Project</span>
+      <span class="project-buttons next-button">Next Project</span>
     </div>
   </div>
 
   <ul class="flex row flex-center">
+    {% for workItem in .site.data.work-content %}
+    <li class="work-item" id="{{workItem.id}}">
+    <div class="work-item-text">
+        <span class="heading"><h1>{{workItem.title}}</h1></span>
+        <span class="tags"><h4>{{workItem.role}}</h4></span>
+        <span class="main-content"><p>{{workItem.content}}</p></span>
+    </div>
+    <div class="overlay">
+      <span class="work-item-caption flex flex-center column">
+        <h1>{{workItem.overlayTitle}}</h1>
+        <p>{{workItem.role}}</p>
+      </span>
+    </div>
+  </li>
+{% endfor %}
 
-<li class="work-item" id="amorae">
-  <div class="work-item-text">
-    {% for amorae in .site.data.amorae-content %}
-      <span class="heading"><h1>{{amorae.title}}</h1></span>
-      <span class="tags"><h4>{{amorae.role}}</h4></span>
-      <span class="main-content"><p>{{amorae.content}}</p></span>
-    {% endfor %}
-  </div>
-  <div class="overlay">
-    <span class="work-item-caption flex flex-center column">
-      <h1>Amorae Bridal</h1>
-      <p>Web Design & development</p>
-    </span>
-  </div>
-</li>
-
-<li class="work-item" id="new">
-  <div class="work-item-text">
-    {% for new in .site.data.new-content %}
-      <span class="heading"><h1>{{new.title}}</h1></span>
-      <span class="tags"><h4>Tags: {{new.tags}}</h4></span>
-      <span class="main-content"><p>{{new.content}}</p></span>
-    {% endfor %}
-  </div>
-  <div class="overlay">
-    <span class="work-item-caption flex flex-center column">
-      <h1>New Project</h1>
-      <p>Print Design</p>
-    </span>
-  </div>
-</li>
-
-    <li class="work-item"></li>
-    <li class="work-item"></li>
-    <li class="work-item"></li>
-    <li class="work-item"></li>
-    <li class="work-item"></li>
-    <li class="work-item"></li>
-    <li class="work-item"></li>
   </ul>
 
 </div>
-
-<div class="work-text-group">
-
-<div class="amorae-text"></div>
-
 
 </div>

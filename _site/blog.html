@@ -18,7 +18,7 @@
     <nav class="flex flex-center">
       <ul>
         <li><a class="about">about</a></li>
-        <li><a href="{{site.baseurl}}" class="{% if page.url == '/index.html' %}current{% endif %}">work</a></li>
+        <li><a href="/index.html" class="">work</a></li>
         <li><a class="" href="blog.html">blog</a></li>
         <li><a class="contact">contact</a></li>
       </ul>
@@ -26,7 +26,50 @@
 </div>
 <hr>
 
-{{content}}
+<div class="blog-wrapper">
+
+  <div class="blog-item flex">
+    <div class="date flex flex-center column">
+      <span class="cal-day">29th</span>
+      <span class="cal-year">July 2015</span>
+    </div>
+
+    <a href=""><div class="blog-item-text">
+      <span class="blog-title"><h2>kitty is annoying me</h2></span>
+      <span class="blog-content"><p>Nulla vitae elit libero, a pharetra augue. Curabitur blandit tempus porttitor. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p></span>
+      <span class="view-post">View Post</span>
+    </div></a>
+  </div>
+
+  <div class="blog-item flex">
+    <div class="date flex flex-center column">
+      <span class="cal-day">15th</span>
+      <span class="cal-year">June 2015</span>
+    </div>
+
+    <a href="http://michaelgriffin.me/Articles/my-new-job/index.html"><div class="blog-item-text">
+      <span class="blog-title"><h2>A Nettl that didn't sting</h2></span>
+      <span class="blog-content"><p>Nulla vitae elit libero, a pharetra augue. Curabitur blandit tempus porttitor. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p></span>
+      <span class="view-post">View Post</span>
+    </div></a>
+  </div>
+
+  <div class="blog-item flex">
+    <div class="date flex flex-center column">
+      <span class="cal-day">14th</span>
+      <span class="cal-year">Feb 1967</span>
+    </div>
+
+    <a href=""><div class="blog-item-text">
+      <span class="blog-title"><h2>I dont know</h2></span>
+      <span class="blog-content"><p>Nulla vitae elit libero, a pharetra augue. Curabitur blandit tempus porttitor. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p></span>
+      <span class="view-post">View Post</span>
+    </div></a>
+  </div>
+
+
+</div>
+
 
 
 <div class="about-panel-overlay"></div>

@@ -1,0 +1,66 @@
+.blog-item
+  width: 70%
+  margin: 100px 0 15px 15%
+  height: auto
+
+  &:nth-child(1)
+    margin-top: 25px!important
+
+
+.date
+  height: 100px
+  padding: 0 10px
+  text-align: center
+  color: #fff
+  background:
+    color: $red
+
+.cal-day
+  font:
+    family: 'slab_serifregular'
+    size: 32px
+
+.cal-year
+  display: block
+  padding: 0 0 4px 0
+  font:
+    size: 12px
+
+.blog-item-text
+  width: 90%
+  padding: 10px
+  transition: all .25s ease-in-out
+  font:
+    family: 'open_sanslight'
+
+  &:hover
+    background:
+      color: #eee
+
+    & .view-post
+      opacity: 1
+      transform: translate(0, 0)
+
+.blog-title
+
+  h2
+    margin: 0
+    padding: 0
+
+.blog-content
+  color: #333
+  font:
+    size: 18px
+
+.view-post
+  opacity: 0
+  transition: all .25s ease-in-out
+  transform: translate(100px, 0)
+  float: right
+  padding: 10px 15px
+  color: #333
+  font:
+    family: 'open_sansregular'
+
+  &:after
+    content: ' > >'

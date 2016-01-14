@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<div class="blog-wrapper">
+{% for blog in site.posts %}
+  <div class="blog-item flex">
+    <div class="date flex flex-center column">
+      <span class="cal-day">{{blog.day}}</span>
+      <span class="cal-year">{{blog.year}}</span>
+    </div>
+
+    <a href="{{blog.source}}"><div class="blog-item-text">
+      <span class="blog-title"><h2>{{blog.title}}</h2></span>
+      <span class="blog-content"><p>{{blog.excerpt}}</p></span>
+      <span class="view-post">View Post</span>
+    </div></a>
+  </div>
+{% endfor %}
+
+</div>

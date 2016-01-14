@@ -1,0 +1,115 @@
+$tablet: 1028px
+$small-tablet: 768px
+$mobile: 480px
+
+@media (max-width: $tablet)
+  .large-image-container
+    width: 100%
+    height: 100vh
+    position: absolute
+    top: 0
+    display: block
+    overflow: hidden
+    background:
+      color: blue
+      size: contain
+      position: center center
+      repeat: no-repeat
+      color: rgba(0,0,0,.9)
+
+  .close-mobile-work-image
+    display: block
+
+  .work-text-container
+    display: none
+    width: 100%
+    height: 60vh
+    top: 50vh
+
+  .work-item
+    width: 47%
+
+
+@media (max-width: $small-tablet)
+  .about-container
+    width: 90%
+    margin-right: 100%
+
+  .work-item
+    width: 97%
+
+  nav
+    width: 100%
+    position: relative
+    top: 0
+    margin: 0
+    padding: 0
+    font:
+      size: 14px
+    background:
+      color: $red
+
+    & a
+        color: #fff!important
+        padding: 1px 2px
+
+  .top-section
+
+    &.flex
+      display: block!important
+
+  .logo-container
+    width: 100%
+    margin: 20px 0
+
+  .blog-item
+    width: 90%!important
+    margin: 0 0 115px 5%!important
+    flex-direction: column!important
+    text-align: center
+    background:
+      color: #eee
+
+    &:nth-child(1)
+      margin-top: 25px!important
+
+    .view-post
+      opacity: 1
+      transition: all .25s ease-in-out
+      transform: translate(0, 0)
+
+    .date
+      width: 100px
+      margin: 0 auto
+
+
+
+@media (max-width: $mobile)
+
+  .about-container
+    width: 100%
+    margin-right: 100%
+
+
+  .work-item
+
+    .overlay
+      opacity: 1
+      transform: translate(0%, 0%)
+      background:
+        color: rgba($red, .7)
+
+  .work-item-caption
+    position: relative
+    padding: 100px 0 0 0
+
+    h1
+      color: #fff
+      opacity: 1
+      transform: translate(0%, 0%)
+      font:
+        family: 'open_sansextrabold'
+    p
+      color: #fff
+      opacity: 1
+      transform: translate(0%, 0%)
