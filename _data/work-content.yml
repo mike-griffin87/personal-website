@@ -27,7 +27,7 @@
   id: english42
   overlayTitle: English42
   role: Web design & development
-  content: The people at English42 approached me to redesign and rebuild their website on a new e-commerce platform. They offer exam correction along with 1 to 1 Skype sessions and wanted their customers to be able to book these sessions online to reduce the amount of admin hours they previously spent phoning customers to confirm bookings. I build the site using Wordpress, Woo-commerce Bookly and Stripe to meet the clients requirements.
+  content: The people at English42 approached me to redesign and rebuild their website on a new e-commerce platform. They offer exam correction along with 1 to 1 Skype sessions and wanted their customers to be able to book these sessions online to reduce the amount of admin hours they previously spent phoning customers to confirm bookings. I build the site using Wordpress, Woo-commerce Bookly and Stripe to meet the clients requirements. <a class="live-site" href="https://www.english42.com" target="new">Check out the Live site.</a>
 
 - title: Weight Watchers
   id: weight-watchers
@@ -39,7 +39,7 @@
   id: slievemore
   overlayTitle: Slievemore Clinic
   role: Web design & development
-  content: Slievemore Clinic is located in south Dublin, they wanted a new responsive solution for their website that was easy to update, cost effective but professional. I built them a one page Wordpress site to accommodate their needs and added the main navigation to give the impression of a larger site. The client had a very limited computer knowledge so I used the divi theme from elegant themes for ease of use.
+  content: Slievemore Clinic is located in south Dublin, they wanted a new responsive solution for their website that was easy to update, cost effective but professional. I built them a one page Wordpress site to accommodate their needs and added the main navigation to give the impression of a larger site. The client had a very limited computer knowledge so I used the divi theme from elegant themes for ease of use.  <a class="live-site" href="http://www.slievemore-clinic.com" target="new">Check out the Live site.</a>
 
 - title: Barclay Club
   id: barclay

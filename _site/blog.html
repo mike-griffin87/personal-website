@@ -15,12 +15,14 @@
       <h1>Michael Griffin</h1>
       <h4>I <span class="fa fa-heart heart"></span> creating stuff & things</h4>
     </div>
-
+    <div class="mobile-nav-toggle">
+      <span></span>
+    </div>
     <nav class="flex flex-center main-nav">
       <ul>
         <li><a class="about">about</a></li>
         <li><a href="/index.html" class="">work</a></li>
-        <li><a class="" href="blog.html">blog</a></li>
+        <li><a class="current" href="blog.html">blog</a></li>
         <li><a class="contact">contact</a></li>
       </ul>
     </nav>
@@ -108,11 +110,11 @@
 </ul>
 </div>
 
-  <form action="contact-form-send" class="contact-form">
-    <input id="name-input" type="text" placeholder="what should I call you?" required>
-    <input id="email-input" type="email" placeholder="you'll need an email address" required>
-    <textarea id="message-input" class="message" type="text" placeholder="whisper sweet nothings..." required></textarea><br />
-    <button class="submit">send message</button>
+  <form class="contact-form" method="POST" action="http://formspree.io/michaelgriffin87@me.com">
+    <input id="name-input" name="Name" type="text" placeholder="what should I call you?" required>
+    <input id="email-input" type="email" placeholder="you'll need an email address" name="E-mail" required>
+    <textarea id="message-input" class="message" type="text" placeholder="whisper sweet nothings..." name="Message" required></textarea><br />
+    <input type="submit" class="submit" value="send message" />
   </form>
 </div>
 

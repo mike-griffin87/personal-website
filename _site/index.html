@@ -15,7 +15,9 @@
       <h1>Michael Griffin</h1>
       <h4>I <span class="fa fa-heart heart"></span> creating stuff & things</h4>
     </div>
-
+    <div class="mobile-nav-toggle">
+      <span></span>
+    </div>
     <nav class="flex flex-center main-nav">
       <ul>
         <li><a class="about">about</a></li>
@@ -111,7 +113,7 @@
     <div class="work-item-text">
         <span class="heading"><h1>English42</h1></span>
         <span class="tags"><h4>Web design & development</h4></span>
-        <span class="main-content"><p>The people at English42 approached me to redesign and rebuild their website on a new e-commerce platform. They offer exam correction along with 1 to 1 Skype sessions and wanted their customers to be able to book these sessions online to reduce the amount of admin hours they previously spent phoning customers to confirm bookings. I build the site using Wordpress, Woo-commerce Bookly and Stripe to meet the clients requirements.</p></span>
+        <span class="main-content"><p>The people at English42 approached me to redesign and rebuild their website on a new e-commerce platform. They offer exam correction along with 1 to 1 Skype sessions and wanted their customers to be able to book these sessions online to reduce the amount of admin hours they previously spent phoning customers to confirm bookings. I build the site using Wordpress, Woo-commerce Bookly and Stripe to meet the clients requirements. <a class="live-site" href="https://www.english42.com" target="new">Check out the Live site.</a></p></span>
     </div>
     <div class="overlay">
       <span class="work-item-caption flex flex-center column">
@@ -139,7 +141,7 @@
     <div class="work-item-text">
         <span class="heading"><h1>Slievemore Clinic</h1></span>
         <span class="tags"><h4>Web design & development</h4></span>
-        <span class="main-content"><p>Slievemore Clinic is located in south Dublin, they wanted a new responsive solution for their website that was easy to update, cost effective but professional. I built them a one page Wordpress site to accommodate their needs and added the main navigation to give the impression of a larger site. The client had a very limited computer knowledge so I used the divi theme from elegant themes for ease of use.</p></span>
+        <span class="main-content"><p>Slievemore Clinic is located in south Dublin, they wanted a new responsive solution for their website that was easy to update, cost effective but professional. I built them a one page Wordpress site to accommodate their needs and added the main navigation to give the impression of a larger site. The client had a very limited computer knowledge so I used the divi theme from elegant themes for ease of use.  <a class="live-site" href="http://www.slievemore-clinic.com" target="new">Check out the Live site.</a></p></span>
     </div>
     <div class="overlay">
       <span class="work-item-caption flex flex-center column">
@@ -219,11 +221,11 @@
 </ul>
 </div>
 
-  <form action="contact-form-send" class="contact-form">
-    <input id="name-input" type="text" placeholder="what should I call you?" required>
-    <input id="email-input" type="email" placeholder="you'll need an email address" required>
-    <textarea id="message-input" class="message" type="text" placeholder="whisper sweet nothings..." required></textarea><br />
-    <button class="submit">send message</button>
+  <form class="contact-form" method="POST" action="http://formspree.io/michaelgriffin87@me.com">
+    <input id="name-input" name="Name" type="text" placeholder="what should I call you?" required>
+    <input id="email-input" type="email" placeholder="you'll need an email address" name="E-mail" required>
+    <textarea id="message-input" class="message" type="text" placeholder="whisper sweet nothings..." name="Message" required></textarea><br />
+    <input type="submit" class="submit" value="send message" />
   </form>
 </div>
 

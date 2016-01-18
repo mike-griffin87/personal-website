@@ -81,4 +81,13 @@ $('.blog-item-text, a').hover(function(){
 function(){
 $(this).prev('.date').removeClass('animated tada');});
 
+//MOBILE NAV TOGGLE
+
+$('.mobile-nav-toggle').on('click', function(){
+  $('.main-nav').toggleClass('is-showing');
+  $('.mobile-nav-toggle').toggleClass('is-showing');
+  $('body').toggleClass('no-scroll');
+
+});
+
 });
