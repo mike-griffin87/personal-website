@@ -50,9 +50,9 @@
   <p class="lets-get-social"><a target="new" href="https://www.youtube.com/watch?v=itvvFfeLh84">(social)</a></p>
   {% include social-nav.html %}
   <form class="contact-form" method="POST" action="http://formspree.io/michaelgriffin87@me.com">
-    <input id="name-input" type="text" placeholder="what should I call you?" required>
-    <input id="email-input" type="email" placeholder="you'll need an email address" required>
-    <textarea id="message-input" class="message" type="text" placeholder="whisper sweet nothings..." required></textarea><br />
+    <input id="name-input" name="Name" type="text" placeholder="what should I call you?" required>
+    <input id="email-input" type="email" placeholder="you'll need an email address" name="E-mail" required>
+    <textarea id="message-input" class="message" type="text" placeholder="whisper sweet nothings..." name="Message" required></textarea><br />
     <input type="submit" class="submit" value="send message" />
   </form>
 </div>
