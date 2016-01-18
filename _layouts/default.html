@@ -20,7 +20,7 @@
       <ul>
         <li><a class="about">about</a></li>
         <li><a href="{{site.baseurl}}" class="{% if page.url == '/index.html' %}current{% endif %}">work</a></li>
-        <li><a class="" href="blog.html">blog</a></li>
+        <li><a class="{% if page.url == '/blog.html' %}current{% endif %}" href="blog.html">blog</a></li>
         <li><a class="contact">contact</a></li>
       </ul>
     </nav>
@@ -53,7 +53,7 @@
     <input id="name-input" type="text" placeholder="what should I call you?" required>
     <input id="email-input" type="email" placeholder="you'll need an email address" required>
     <textarea id="message-input" class="message" type="text" placeholder="whisper sweet nothings..." required></textarea><br />
-    <button class="submit">send message</button>
+    <input type="submit" class="submit">send message />
   </form>
 </div>
 
