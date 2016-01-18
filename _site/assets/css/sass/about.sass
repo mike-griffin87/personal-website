@@ -1,5 +1,5 @@
 .about-container
-  display: none
+  visibility: hidden
   position: fixed
   margin-right: -60%
   top: 0
@@ -20,6 +20,7 @@
     margin: 15px auto
 
   &.show
+    visibility: visible
     transition: all .3s ease-in-out
     display: block
     margin-right: 0px
@@ -60,9 +61,14 @@
     position: center center
 
   ul
+    position: absolute
+    top: 280px
+
+.social-nav
+  ul
     position: relative
-    top: 300px
     text-align: center
+    padding: 20px 0
 
     li, a
       display: inline-block
@@ -75,7 +81,7 @@
         weight: 400
 
       &:hover
-        transform: translate(0,-10px)
+        transform: translate(0,-8px)
 
 .about-panel-overlay
   position: fixed

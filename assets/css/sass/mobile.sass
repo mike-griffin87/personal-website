@@ -2,11 +2,15 @@ $tablet: 1028px
 $small-tablet: 768px
 $mobile: 480px
 
+@media (min-width: $tablet)
+  .mobile-project-buttons
+    display: none
+
 @media (max-width: $tablet)
   .large-image-container
     width: 100%
-    height: 100vh
-    position: absolute
+    height: 75vh
+    position: fixed
     top: 0
     display: block
     overflow: hidden
@@ -19,16 +23,90 @@ $mobile: 480px
 
   .close-mobile-work-image
     display: block
+    width: 42px
+    height: 42px
+    line-height: 42px
+    text-align: center
+    border-radius: 50%
+    background:
+      color: $red
+
 
   .work-text-container
-    display: none
     width: 100%
-    height: 60vh
-    top: 50vh
+    top: 75vh
+    bottom: 0
+    position: fixed
+    display: block
+
+    h1
+      margin: 0
+      padding: 0
+      text-transform: uppercase
+      letter-spacing: 1px
+      font:
+        family: 'open_sansregular'
+        size: 20px
+
+    h4
+      margin: 0
+      padding: 0
+      text-transform: uppercase
+      font:
+        weight: 100
+        size: 12px
+
+    p
+      padding: 15px 25px
+      display: none
+
+  .project-text
+    margin-top: 5px
+
+  .next-prev-project-buttons
+    display: none
 
   .work-item
     width: 47%
 
+  .mobile-next
+    transform: translate(30px, 0) scale(1)
+
+  .mobile-prev
+    transform: translate(-30px, 0) scale(1)
+
+  .mobile-prev,
+  .mobile-next
+    opacity: .1
+    margin: 10px 10px
+    color: $red
+    width: 35px
+    height: 35px
+    line-height: 33px
+    border-radius: 50%
+    cursor: pointer
+    transition: all .25s ease-in-out
+    transition-delay: .18s
+    font:
+      size: 25px
+      weight: 800
+    background:
+      color: #fff
+
+    &:hover
+      transform: scale(1.3)
+
+  .mobile-project-buttons-showing
+    transform: translate(0, 0)
+    opacity: 1
+
+  .main-nav
+    display: none
+
+  .work-wrapper
+
+    & .close-work-large-container
+      display: none
 
 @media (max-width: $small-tablet)
   .about-container
@@ -38,25 +116,28 @@ $mobile: 480px
   .work-item
     width: 97%
 
-  nav
-    width: 100%
-    position: relative
-    top: 0
-    margin: 0
-    padding: 0
-    font:
-      size: 14px
-    background:
-      color: $red
-
-    & a
-        color: #fff!important
-        padding: 1px 2px
-
   .top-section
+    flex-direction: column-reverse
 
-    &.flex
-      display: block!important
+    & .main-nav
+      width: 100%
+      position: fixed
+      top: 0
+      left: 0
+      z-index: 100
+      background:
+        color: $red
+
+      li
+        padding: 0px 0px
+
+        a
+          color: #fff
+
+        &:hover
+          background:
+            color: lighten($red, 5%)
+
 
   .logo-container
     width: 100%
@@ -85,11 +166,12 @@ $mobile: 480px
 
 
 @media (max-width: $mobile)
+  .logo-container
+    text-align: center
 
   .about-container
     width: 100%
     margin-right: 100%
-
 
   .work-item
 
@@ -97,7 +179,7 @@ $mobile: 480px
       opacity: 1
       transform: translate(0%, 0%)
       background:
-        color: rgba($red, .7)
+        color: rgba(#333, .6)
 
   .work-item-caption
     position: relative
@@ -109,6 +191,7 @@ $mobile: 480px
       transform: translate(0%, 0%)
       font:
         family: 'open_sansextrabold'
+        size: 25px
     p
       color: #fff
       opacity: 1

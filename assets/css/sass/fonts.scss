@@ -234,11 +234,11 @@
 /* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
    readers do not read off random characters that represent icons */
 
-   .fa-heart:before {
-     content: "\f004";
-   }
+.fa-heart:before {
+ content: "\f004";
+}
 
-   .fa-search:before {
+.fa-search:before {
   content: "\f002";
 }
 
@@ -260,4 +260,12 @@
 
 .fa-times:before {
 content: '\f00d';
+}
+
+.fa-angle-right:before {
+  content: "\f105";
+}
+
+.fa-angle-left:before {
+  content: "\f104";
 }

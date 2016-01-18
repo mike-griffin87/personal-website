@@ -23,6 +23,9 @@
     transform: translate(0%, 20%)
     opacity: 1
 
+  & .fa-envelope:hover
+    color: #eee
+
   h2
     margin: 0
     padding: 25px 0 0 0
@@ -32,25 +35,6 @@
     font:
       size: 26px
       family: 'open_sansregular'
-
-  ul
-    padding: 30px 0 20px 0
-
-    li, a
-      display: inline-block
-      color: #fff
-      padding: 0 4px
-      opacity: .4
-      transition: all .25s ease-in-out
-      transform: scale(1)
-      font:
-        size: 26px
-        weight: 400
-
-      &:hover
-        color: #fff
-        opacity: 1
-        transform: scale(1.2)
 
 textarea,
 input
@@ -101,3 +85,14 @@ textarea
     padding: 0
     margin: 0
     text-decoration: none
+
+
+.invalid
+  color: $red
+  background:
+    color: #333
+
+.valid
+  color: #fff
+  background:
+    color: $green
