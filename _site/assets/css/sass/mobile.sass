@@ -8,6 +8,10 @@ $mobile: 480px
 
 @media (max-width: $tablet)
 
+  .contact-section
+    width: 60%
+    margin-left: 20%
+
   .main-nav
     display: none
     ul
@@ -15,7 +19,7 @@ $mobile: 480px
       flex-direction: column
       align-items: center
       justify-content: center
-      position: absolute
+      position: fixed
       top: 0
       left: 0
       right: 0
@@ -224,6 +228,11 @@ $mobile: 480px
 
 
 @media (max-width: $mobile)
+
+  .contact-section
+    width: 90%
+    margin-left: 2.5%
+
   .logo-container
     text-align: center
 
@@ -257,3 +266,9 @@ $mobile: 480px
 
   .mobile-nav-toggle
     top: 10px
+
+  .mobile-prev,
+  .mobile-next
+
+    &:hover
+      transform: scale(1)

@@ -1,17 +1,26 @@
 $(document).ready(function(){
 
+function checkBodyForClass (){
+  if (!$('body').hasClass('no-scroll')) {
+  $('body').addClass('no-scroll');
+} else {
+  $('body').removeClass('no-scroll');}
+}
+
 // ADD
 // ABOUT PANEL & NO SCROLL/OVERLAY
   $('.about').on('click', function(){
     $('.about-container, .about-panel-overlay').addClass('show');
-    $('body').addClass('no-scroll');
+    $('.main-nav').removeClass('is-showing');
+    $('.mobile-nav-toggle').removeClass('is-showing');
+    checkBodyForClass();
   });
 
 // REMOVE
 // ABOUT PANEL & NO SCROLL/OVERLAY
   $('.close, .about-panel-overlay').on('click', function(){
     $('.about-container, .about-panel-overlay, .contact-section').removeClass('show');
-    $('body').removeClass('no-scroll');
+    checkBodyForClass();
   });
 
 // ADD
@@ -19,7 +28,9 @@ $(document).ready(function(){
   $('.contact').on('click', function (){
     $('.contact-section, .about-panel-overlay').addClass('show');
     $('.contact-section').css('display','block');
-    $('body').addClass('no-scroll');
+    $('.main-nav').removeClass('is-showing');
+    $('.mobile-nav-toggle').removeClass('is-showing');
+    checkBodyForClass();
   });
 
 //NAVIGATE THROUGH WORK ITEMS
@@ -30,7 +41,7 @@ $(document).ready(function(){
     $('.large-image-container').addClass('show-large-image');
     $('.work-text-container').addClass('show-work-item-text');
     $('.mobile-prev, .mobile-next').addClass('mobile-project-buttons-showing');
-    $('body').addClass('no-scroll');
+    checkBodyForClass();
 
     $('.next-button, .mobile-next').on('click', function() {
       current = $(current).next('.work-item');
@@ -72,7 +83,7 @@ $(document).ready(function(){
     $('.work-text-container').removeClass('show-work-item-text');
     $('.mobile-prev, .mobile-next').removeClass('mobile-project-buttons-showing');
     $('.project-text').html("");
-    $('body').removeClass('no-scroll');
+    checkBodyForClass();
   });
 
 $('.blog-item-text, a').hover(function(){
@@ -86,8 +97,6 @@ $(this).prev('.date').removeClass('animated tada');});
 $('.mobile-nav-toggle').on('click', function(){
   $('.main-nav').toggleClass('is-showing');
   $('.mobile-nav-toggle').toggleClass('is-showing');
-  $('body').toggleClass('no-scroll');
-
 });
 
 });

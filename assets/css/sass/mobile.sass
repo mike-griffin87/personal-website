@@ -1,5 +1,6 @@
 $tablet: 1028px
 $small-tablet: 768px
+$large-mobile: 678px
 $mobile: 480px
 
 @media (min-width: $tablet)
@@ -8,6 +9,10 @@ $mobile: 480px
 
 @media (max-width: $tablet)
 
+  .contact-section
+    width: 60%
+    margin-left: 20%
+
   .main-nav
     display: none
     ul
@@ -15,7 +20,7 @@ $mobile: 480px
       flex-direction: column
       align-items: center
       justify-content: center
-      position: absolute
+      position: fixed
       top: 0
       left: 0
       right: 0
@@ -188,6 +193,62 @@ $mobile: 480px
         transform: rotate(-45deg)
         top: -4px
 
+  .about-container
+
+    h2
+      display: none
+    p
+      font-size: 14px
+      text-align: left
+      width: 90%
+      padding-top: 10px
+      margin: 8px auto 0px auto
+
+.about-image
+  position: relative
+  width: 100%
+  min-height: 200px
+  background:
+    image: url('../img/mike-portfolio-image.jpg')
+    size: cover
+    position: center center
+
+  ul
+    position: absolute
+    top: 130px
+
+  .social-nav
+    ul
+      position: relative
+      text-align: center
+      padding: 20px 0
+
+      li, a
+        display: inline-block
+        color: #fff
+        padding: 0 5px
+        transform: translate(0,0)
+        transition: all .25s ease-in-out
+        font:
+          size: 28px
+          weight: 400
+
+        &:hover
+          transform: translate(0,-8px)
+
+@media (min-width: $large-mobile)
+  .about-image
+    position: relative
+    width: 100%
+    min-height: 300px
+    background:
+      image: url('../img/mike-portfolio-image.jpg')
+      size: cover
+      position: center center
+
+    ul
+      position: absolute
+      top: 230px
 
 @media (max-width: $small-tablet)
   .about-container
@@ -224,6 +285,42 @@ $mobile: 480px
 
 
 @media (max-width: $mobile)
+
+  .contact-section
+    width: 90%
+    margin-left: 2.5%
+
+  .contact-section
+
+    &.show
+      transform: translate(0%, 8%)
+
+  textarea,
+  input
+    height: 30px
+
+  textarea
+    resize: none
+
+  .submit
+    height: 34px
+    border: 0
+    width: 94%
+    color: $red
+    cursor: pointer
+    padding: 4px
+    margin: 10px
+    border-radius: 4px
+    filter: drop-shadow(0px 0px 2px rgba(0,0,0, .4))
+    font:
+      size: 16px
+      family: 'open_sansregular'
+    background:
+      color: #fff
+
+  .message
+    height: 75px
+
   .logo-container
     text-align: center
 
@@ -257,3 +354,9 @@ $mobile: 480px
 
   .mobile-nav-toggle
     top: 10px
+
+  .mobile-prev,
+  .mobile-next
+
+    &:hover
+      transform: scale(1)

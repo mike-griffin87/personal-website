@@ -16,8 +16,14 @@
 
   h2, p
     text-align: left
-    width: 80%
-    margin: 15px auto
+    width: 90%
+    margin: 8px auto 0px auto
+
+  a
+    display: inline-block
+    color: $red
+    font:
+      family: 'open_sansregular'
 
   &.show
     visibility: visible
@@ -29,12 +35,13 @@
 .about-text
 
   h2
+  display: block
   font-family: 'open_sansextrabold'
   margin: 0
   padding: 0
   color: #333
   font:
-    size: 30px
+    size: 22px
 
 .resume-button
   cursor: pointer
@@ -53,8 +60,9 @@
       color: darken($red, 10%)
 
 .about-image
+  position: relative
   width: 100%
-  height: 350px
+  min-height: 300px
   background:
     image: url('../img/mike-portfolio-image.jpg')
     size: cover
@@ -62,7 +70,7 @@
 
   ul
     position: absolute
-    top: 280px
+    top: 230px
 
 .social-nav
   ul
