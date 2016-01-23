@@ -1,64 +1,31 @@
-$tablet: 1028px
+$tablet: 1027px
 $small-tablet: 768px
 $large-mobile: 678px
 $mobile: 480px
+
+.mobile-social-nav
+  ul
+    .fa-dribbble
+      color: #ea4c89
+
+    .fa-instagram
+      color: #9b6954
+
+    .fa-envelope
+      color: $red
+
+    .fa-twitter
+      color: #00aced
+
 
 @media (min-width: $tablet)
   .mobile-project-buttons
     display: none
 
-@media (max-width: $tablet)
-
-  .contact-section
-    width: 60%
-    margin-left: 20%
-
-  .main-nav
+  .close-mobile-work-image
     display: none
-    ul
-      display: flex
-      flex-direction: column
-      align-items: center
-      justify-content: center
-      position: fixed
-      top: 0
-      left: 0
-      right: 0
-      bottom: 0
-      width: 100%
-      background: rgba($red, .9)
-      text-align: center
-      z-index: 3
 
-    &.is-showing
-      display: block
-
-      li
-        display: block
-        a
-          color: $red
-          padding: 10px 25px
-          margin: 10px
-          border-radius: 5px
-          background:
-            color: #fff
-          font:
-            size: 18px
-
-
-  .large-image-container
-    width: 100%
-    height: 75vh
-    position: fixed
-    top: 0
-    display: block
-    overflow: hidden
-    background:
-      color: blue
-      size: contain
-      position: center center
-      repeat: no-repeat
-      color: rgba(0,0,0,.9)
+@media (max-width: $tablet)
 
   .close-mobile-work-image
     display: block
@@ -69,44 +36,6 @@ $mobile: 480px
     border-radius: 50%
     background:
       color: $red
-
-
-  .work-text-container
-    width: 100%
-    top: 75vh
-    bottom: 0
-    position: fixed
-    display: block
-
-    h1
-      margin: 0
-      padding: 0
-      text-transform: uppercase
-      letter-spacing: 1px
-      font:
-        family: 'open_sansregular'
-        size: 20px
-
-    h4
-      margin: 0
-      padding: 0
-      text-transform: uppercase
-      font:
-        weight: 100
-        size: 12px
-
-    p
-      padding: 15px 25px
-      display: none
-
-  .project-text
-    margin-top: 5px
-
-  .next-prev-project-buttons
-    display: none
-
-  .work-item
-    width: 47%
 
   .mobile-next
     transform: translate(30px, 0) scale(1)
@@ -138,11 +67,6 @@ $mobile: 480px
   .mobile-project-buttons-showing
     transform: translate(0, 0)
     opacity: 1
-
-  .work-wrapper
-
-    & .close-work-large-container
-      display: none
 
   .mobile-nav-toggle
     width: 40px
@@ -193,164 +117,11 @@ $mobile: 480px
         transform: rotate(-45deg)
         top: -4px
 
-  .about-container
-
-    h2
-      display: none
-    p
-      font-size: 14px
-      text-align: left
-      width: 90%
-      padding-top: 10px
-      margin: 8px auto 0px auto
-
-.about-image
-  position: relative
-  width: 100%
-  min-height: 200px
-  background:
-    image: url('../img/mike-portfolio-image.jpg')
-    size: cover
-    position: center center
-
-  ul
-    position: absolute
-    top: 130px
-
-  .social-nav
-    ul
-      position: relative
-      text-align: center
-      padding: 20px 0
-
-      li, a
-        display: inline-block
-        color: #fff
-        padding: 0 5px
-        transform: translate(0,0)
-        transition: all .25s ease-in-out
-        font:
-          size: 28px
-          weight: 400
-
-        &:hover
-          transform: translate(0,-8px)
-
-@media (min-width: $large-mobile)
-  .about-image
-    position: relative
-    width: 100%
-    min-height: 300px
-    background:
-      image: url('../img/mike-portfolio-image.jpg')
-      size: cover
-      position: center center
-
-    ul
-      position: absolute
-      top: 230px
-
-@media (max-width: $small-tablet)
-  .about-container
-    width: 90%
-    margin-right: 100%
-
-  .work-item
-    width: 97%
-
-  .logo-container
-    width: 100%
-    margin: 20px 0
-
-  .blog-item
-    width: 90%!important
-    margin: 0 0 115px 5%!important
-    flex-direction: column!important
-    text-align: center
-    background:
-      color: #eee
-
-    &:nth-child(1)
-      margin-top: 25px!important
-
-    .view-post
-      opacity: 1
-      transition: all .25s ease-in-out
-      transform: translate(0, 0)
-
-    .date
-      width: 100px
-      margin: 0 auto
-
-
-
 @media (max-width: $mobile)
 
-  .contact-section
-    width: 90%
-    margin-left: 2.5%
-
-  .contact-section
-
-    &.show
-      transform: translate(0%, 8%)
-
-  textarea,
-  input
-    height: 30px
-
-  textarea
-    resize: none
-
-  .submit
-    height: 34px
-    border: 0
-    width: 94%
-    color: $red
-    cursor: pointer
-    padding: 4px
-    margin: 10px
-    border-radius: 4px
-    filter: drop-shadow(0px 0px 2px rgba(0,0,0, .4))
-    font:
-      size: 16px
-      family: 'open_sansregular'
-    background:
-      color: #fff
-
-  .message
-    height: 75px
-
-  .logo-container
-    text-align: center
-
-  .about-container
-    width: 100%
-    margin-right: 100%
-
-  .work-item
-
-    .overlay
-      opacity: 1
-      transform: translate(0%, 0%)
-      background:
-        color: rgba(#333, .6)
-
-  .work-item-caption
-    position: relative
-    padding: 100px 0 0 0
-
-    h1
-      color: #fff
-      opacity: 1
-      transform: translate(0%, 0%)
-      font:
-        family: 'open_sansextrabold'
-        size: 25px
-    p
-      color: #fff
-      opacity: 1
-      transform: translate(0%, 0%)
+  .mobile-social-nav,
+  .mobile-social-nav .social-nav
+    display: block
 
   .mobile-nav-toggle
     top: 10px

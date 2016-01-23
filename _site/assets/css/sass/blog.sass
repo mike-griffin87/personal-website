@@ -6,7 +6,6 @@
   &:nth-child(1)
     margin-top: 25px!important
 
-
 .date
   height: 100px
   padding: 0 10px
@@ -64,3 +63,27 @@
 
   &:after
     content: ' > >'
+
+/*---------- RESPONSIVE STYLES ----------*/
+
+@media (max-width: 768px)
+
+  .blog-item
+    width: 90%!important
+    margin: 0 0 115px 5%!important
+    flex-direction: column!important
+    text-align: center
+    background:
+      color: #eee
+
+    &:nth-child(1)
+      margin-top: 25px!important
+
+    .view-post
+      opacity: 1
+      transition: all .25s ease-in-out
+      transform: translate(0, 0)
+
+    .date
+      width: 100px
+      margin: 0 auto

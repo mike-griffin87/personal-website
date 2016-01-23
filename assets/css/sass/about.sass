@@ -1,16 +1,15 @@
 .about-container
   visibility: hidden
   position: fixed
-  margin-right: -60%
   top: 0
   right: 0
   width: 50%
-  min-height: 100%
+  height: 100%
   box-shadow: -10px -5px 40px 15px rgba(0,0,0,.5)
   z-index: 4
-  transition: translateX(100px)
+  transform: translate(100%, 0%)
   transition: all .25s ease-in-out
-  opacity: .1
+  opacity: 0
   background:
     color: #fff
 
@@ -18,6 +17,11 @@
     text-align: left
     width: 90%
     margin: 8px auto 0px auto
+
+  p
+    line-height: 23px
+    font:
+      size: 14px
 
   a
     display: inline-block
@@ -27,9 +31,8 @@
 
   &.show
     visibility: visible
+    transform: translate(0%, 0%)
     transition: all .3s ease-in-out
-    display: block
-    margin-right: 0px
     opacity: 1
 
 .about-text
@@ -62,7 +65,7 @@
 .about-image
   position: relative
   width: 100%
-  min-height: 300px
+  height: 50%
   background:
     image: url('../img/mike-portfolio-image.jpg')
     size: cover
@@ -70,7 +73,7 @@
 
   ul
     position: absolute
-    top: 230px
+    top: 0
 
 .social-nav
   ul
@@ -91,9 +94,21 @@
       &:hover
         transform: translate(0,-8px)
 
+    .fa-dribbble:hover
+      color: #ea4c89
+
+    .fa-instagram:hover
+      color: #9b6954
+
+    .fa-envelope:hover
+      color: $red
+
+    .fa-twitter:hover
+      color: #00aced
+
 .about-panel-overlay
+  visibility: hidden
   position: fixed
-  display: block
   cursor: pointer
   top: 0
   left: 0
@@ -110,16 +125,87 @@
     pointer-events: auto
     transition: all .2s ease-in-out
     opacity: 1
-    display: block!important
+    visibility: visible
 
-.fa-dribbble:hover
-  color: #ea4c89
+//.nettl-link
+  color: $nettl-green !important
+  border-bottom: 1px solid $nettl-green
+  filter: drop-shadow(.5px .5px 0px rgba($grey, .5))
+  font:
+    size: larger
 
-.fa-instagram:hover
-  color: #9b6954
+.mobile-social-nav
+  display: none
 
-.fa-envelope:hover
-  color: $red
+@media (max-width: 1028px)
 
-.fa-twitter:hover
-  color: #00aced
+  .about-container
+    p
+      font-size: 14px
+      text-align: left
+      width: 90%
+      padding-top: 10px
+      margin: 8px auto 0px auto
+
+.about-image
+  position: relative
+  width: 100%
+  background:
+    image: url('../img/mike-portfolio-image.jpg')
+    size: cover
+    position: center center
+
+  ul
+    position: absolute
+    top: 40vh
+
+  .social-nav
+    ul
+      position: relative
+      text-align: center
+      padding: 20px 0
+
+      li, a
+        display: inline-block
+        color: #fff
+        padding: 0 5px
+        transform: translate(0,0)
+        transition: all .25s ease-in-out
+        font:
+          size: 28px
+          weight: 400
+
+        &:hover
+          transform: translate(0,-8px)
+
+/*---------- RESPONSIVE STYLES ----------*/
+
+
+@media (max-width: 768px)
+  .about-container
+    width: 90%
+    margin-right: 0
+
+@media (max-width: 480px)
+
+  .about-container
+    width: 100%
+    margin-right: 0
+
+    h2
+      display: none
+    p
+      margin: 0 auto
+      padding: 0
+      font:
+        size: 14px
+
+  .about-image
+    width: 100px
+    height: 100px
+    border-radius: 50%
+    margin: 5% auto 3% auto
+    box-shadow: 0px 0px 2px 2px rgba($grey, .7)
+
+  .social-nav
+    display: none

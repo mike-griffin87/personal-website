@@ -38,7 +38,7 @@ gulp.task('imagemin', function(){
 gulp.task('sass', function(){
   return gulp.src('assets/css/sass/main.sass')
     .pipe(plumber({errorHandler: errorAlert}))
-    .pipe(sass({ outputStyle: 'compressed' }))
+    .pipe(sass({ outputStyle: 'nested' }))
     .pipe(autoprefixer({ browsers: ['last 2 versions'], cascade: false }))
     .pipe(gulp.dest('_site/assets/css'))
     .pipe(gulp.dest('assets/css'))

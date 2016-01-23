@@ -19,7 +19,7 @@
   border: 1px solid #333
 
   &:hover .overlay,
-  &:hover .work-item-caption h1,
+  &:hover  h1,
   &:hover .work-item-caption p
     transform: translate(0%, 0%)
     opacity: 1
@@ -220,3 +220,98 @@
     image: url('../img/eriu.jpg')
     size: cover
     position: center center
+
+
+@media (max-width: 1027px)
+
+  .large-image-container
+    width: 100%
+    height: 75vh
+    position: fixed
+    top: 0
+    display: block
+    overflow: hidden
+    background:
+      color: blue
+      size: contain
+      position: center center
+      repeat: no-repeat
+      color: rgba(0,0,0,.9)
+
+  .work-text-container
+    width: 100%
+    top: 75vh
+    bottom: 0
+    position: fixed
+    display: block
+
+    h1
+      margin: 0
+      padding: 0
+      text-transform: uppercase
+      letter-spacing: 1px
+      font:
+        family: 'open_sansregular'
+        size: 20px
+
+    h4
+      margin: 0
+      padding: 0
+      text-transform: uppercase
+      font:
+        weight: 100
+        size: 12px
+
+    p
+      padding: 15px 25px
+      display: none
+
+  .project-text
+    margin-top: 5px
+
+  .next-prev-project-buttons
+    display: none
+
+  .work-item
+    width: 47%
+
+  .work-wrapper
+
+    & .close-work-large-container
+      display: none
+
+  .project-text
+    margin-top: 5px
+    height: auto
+
+@media (max-width: 768px)
+
+    .work-item
+      width: 97%
+
+@media (max-width: 480px)
+
+  .work-item
+
+    .overlay
+      opacity: 1
+      transform: translate(0%, 0%)
+      background:
+        color: rgba(#333, .6)
+
+  .work-item-caption
+    position: relative
+    padding: 100px 0 0 0
+    margin: auto
+
+    h1
+      color: #fff
+      opacity: 1
+      transform: translate(0%, 0%)
+      font:
+        family: 'open_sansextrabold'
+        size: 25px
+    p
+      color: #fff
+      opacity: 1
+      transform: translate(0%, 0%)
