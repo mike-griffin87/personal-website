@@ -1,6 +1,6 @@
 ---
 title: A Nettl that didn't sting
-id: nettl
+custom: nettl
 width: post-70
 icon: fa-desktop
 type: Interactive Post

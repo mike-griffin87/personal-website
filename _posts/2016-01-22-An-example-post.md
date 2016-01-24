@@ -1,6 +1,6 @@
 ---
 title: Example Post
-id: example
+custom: example
 width: post-30
 icon: fa-pencil
 type: Text Post

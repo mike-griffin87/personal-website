@@ -5,7 +5,7 @@ layout: default
 <div class="posts-container">
   {% for blog in site.posts %}
   <a  href="{{blog.url}}" target="new" class="flex row wrap">
-    <div id="{{blog.id}}" class="post {{blog.width}}">
+    <div id="{{blog.custom}}" class="post {{blog.width}}">
       <div class="post-info flex-center flex column">
         <div class="post-type flex flex-center column">
           <span class="fa {{blog.icon}} post-type-icon"></span>
