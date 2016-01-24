@@ -2,22 +2,21 @@
 layout: default
 ---
 
-<div class="blog-wrapper">
-{% for blog in site.posts %}
-  <div class="blog-item flex">
-    <div class="date flex flex-center column">
-      <span class="cal-day">{{blog.day}}</span>
-      <span class="cal-year">{{blog.year}}</span>
+<div class="posts-container">
+  {% for blog in site.posts %}
+  <a  href="{{blog.url}}" target="new" class="flex row wrap">
+    <div id="{{blog.id}}" class="post {{blog.width}}">
+      <div class="post-info flex-center flex column">
+        <div class="post-type flex flex-center column">
+          <span class="fa {{blog.icon}} post-type-icon"></span>
+          <span class="post-type-text">{{blog.type}}</span>
+        </div>
+        <div class="post-title">{{blog.title}}<span class="post-date">{{blog.Postdate}}</span>
+        </div>
+      </div>
     </div>
-
-    <a href="{{blog.source}}"><div class="blog-item-text">
-      <span class="blog-title"><h2>{{blog.title}}</h2></span>
-      <span class="blog-content"><p>{{blog.excerpt}}</p></span>
-      <span class="view-post">View Post</span>
-    </div></a>
-  </div>
-{% endfor %}
-
+  </a>
+  {% endfor %}
 </div>
 
 {% include subscribe.html %}
