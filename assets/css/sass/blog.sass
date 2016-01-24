@@ -64,7 +64,63 @@
   &:after
     content: ' > >'
 
+.sub-container
+  margin: auto
+  input
+    border: 0
+    padding: 2px 0
+    margin: 0
+    outline: none
+    color: $grey
+
+    &:focus
+      background:
+        color: lighten($light-grey, 5%)
+
+  .send-button
+    display: block
+    position: absolute
+    margin: -4px 0 0 -22px
+    padding: 0
+    width: 50px !important
+    height: 50px !important
+    border: 0
+    border-radius: 50%
+    color: $white
+    transform: rotate(15deg) scale(1)
+    transition: all .25s ease-in-out
+    cursor: pointer
+    font:
+      size: 25px
+      weight: 100
+    background:
+      color: darken($green, 10%)
+
+    &:hover
+      transform: rotate(22deg) scale(1.2)
+      background:
+        color: $green
+
+.text-center
+  text-align: center
+
+  p
+    font:
+      size: 12px
+
+.sub-container
+  width: 55%
+  h1
+    color: #333
+    font:
+      family: 'open_sansextrabold'
+
+
 /*---------- RESPONSIVE STYLES ----------*/
+
+@media (max-width: 1027px)
+  .sub-container
+    width: 70%
 
 @media (max-width: 768px)
 
@@ -87,3 +143,6 @@
     .date
       width: 100px
       margin: 0 auto
+
+  .sub-container
+    width: 90%

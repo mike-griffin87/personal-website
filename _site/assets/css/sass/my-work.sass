@@ -19,7 +19,7 @@
   border: 1px solid #333
 
   &:hover .overlay,
-  &:hover .work-item-caption h1,
+  &:hover  h1,
   &:hover .work-item-caption p
     transform: translate(0%, 0%)
     opacity: 1
@@ -144,7 +144,6 @@
 .project-text
   margin-top: 100px
   height: 40%
-  background: pink
 
 .next-prev-project-buttons
   margin-top: 125px
@@ -281,6 +280,10 @@
     & .close-work-large-container
       display: none
 
+  .project-text
+    margin-top: 5px
+    height: auto
+
 @media (max-width: 768px)
 
     .work-item
@@ -299,6 +302,7 @@
   .work-item-caption
     position: relative
     padding: 100px 0 0 0
+    margin: auto
 
     h1
       color: #fff

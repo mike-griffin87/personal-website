@@ -227,6 +227,9 @@
 .fa-angle-left:before {
   content: "\f104"; }
 
+.fa-paper-plane:before {
+  content: "\f1d8"; }
+
 body {
   font-family: 'open_sanslight'; }
   body.no-scroll {
@@ -613,6 +616,11 @@ hr {
 
 .top-section {
   margin-top: 25px; }
+  .top-section h4 span {
+    color: rgba(231, 76, 60, 0.5);
+    line-height: 20px;
+    font-family: 'open_sansregular';
+    font-size: 21px; }
 
 .logo-container {
   width: 50%; }
@@ -1160,7 +1168,54 @@ textarea {
   .view-post:after {
     content: ' > >'; }
 
+.sub-container {
+  margin: auto; }
+  .sub-container input {
+    border: 0;
+    padding: 2px 0;
+    margin: 0;
+    outline: none;
+    color: #333333; }
+    .sub-container input:focus {
+      background-color: #fbfbfb; }
+  .sub-container .send-button {
+    display: block;
+    position: absolute;
+    margin: -4px 0 0 -22px;
+    padding: 0;
+    width: 50px !important;
+    height: 50px !important;
+    border: 0;
+    border-radius: 50%;
+    color: #ffffff;
+    -webkit-transform: rotate(15deg) scale(1);
+    transform: rotate(15deg) scale(1);
+    transition: all .25s ease-in-out;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 100;
+    background-color: #25a25a; }
+    .sub-container .send-button:hover {
+      -webkit-transform: rotate(22deg) scale(1.2);
+      transform: rotate(22deg) scale(1.2);
+      background-color: #2ecc71; }
+
+.text-center {
+  text-align: center; }
+  .text-center p {
+    font-size: 12px; }
+
+.sub-container {
+  width: 55%; }
+  .sub-container h1 {
+    color: #333;
+    font-family: 'open_sansextrabold'; }
+
 /*---------- RESPONSIVE STYLES ----------*/
+@media (max-width: 1027px) {
+  .sub-container {
+    width: 70%; } }
+
 @media (max-width: 768px) {
   .blog-item {
     width: 90% !important;
@@ -1179,7 +1234,9 @@ textarea {
       transform: translate(0, 0); }
     .blog-item .date {
       width: 100px;
-      margin: 0 auto; } }
+      margin: 0 auto; }
+  .sub-container {
+    width: 90%; } }
 
 /*!
  * animate.css -http://daneden.me/animate
