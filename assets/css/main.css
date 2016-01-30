@@ -407,6 +407,7 @@ hr {
     padding: 0;
     opacity: 0;
     text-transform: uppercase;
+    text-align: center;
     transition: all .25s ease-in-out;
     transition-delay: .18s;
     -webkit-transform: translate(-20%, 0%);
@@ -929,7 +930,7 @@ input {
   height: 40px;
   border: 0;
   text-align: center;
-  margin: 4px 3% 4px 3%;
+  margin: 5px 0;
   border-radius: 4px;
   -webkit-filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.4));
   filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.4));
@@ -1228,13 +1229,31 @@ textarea {
 .posts-container {
   width: 70%;
   height: auto;
-  margin-left: 15%; }
+  margin-left: 15%;
+  border-radius: 5px; }
 
 .post {
   min-height: 200px;
+  min-width: 100px;
   position: relative;
   cursor: pointer;
   overflow: hidden; }
+  .post .title-before-hover {
+    display: block;
+    text-align: center;
+    line-height: 200px;
+    text-transform: uppercase;
+    transition: all .15s ease;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    opacity: 1;
+    color: #ffffff;
+    font-size: 24px;
+    font-family: 'open_sansregular'; }
+  .post:hover .title-before-hover {
+    -webkit-transform: translate(50%, 0);
+    transform: translate(50%, 0);
+    opacity: 0; }
   .post:hover .post-info {
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0); }
@@ -1270,7 +1289,7 @@ textarea {
   font-size: 12px;
   opacity: 0;
   transition: all .25s ease-in-out;
-  transition-delay: .05s;
+  transition-delay: .08s;
   -webkit-transform: translate(-50%, 0);
   transform: translate(-50%, 0); }
 
@@ -1293,20 +1312,16 @@ textarea {
   font-size: 10px; }
 
 .post-70 {
-  width: 70%;
-  background-color: green; }
+  width: 70%; }
 
 .post-30 {
-  width: 30%;
-  background-color: honeydew; }
+  width: 30%; }
 
 .post-100 {
-  width: 100%;
-  background-color: yellow; }
+  width: 100%; }
 
 .post-50 {
-  width: 50%;
-  background-color: fuchsia; }
+  width: 50%; }
 
 #nettl {
   background-image: url("../img/nettl.jpg");
@@ -1315,6 +1330,26 @@ textarea {
 
 #example {
   background-image: url("../img/example.jpg");
+  background-size: cover;
+  background-position: center center; }
+
+#new-post {
+  background-image: url("../img/new-post.jpg");
+  background-size: cover;
+  background-position: center center; }
+
+#new-post2 {
+  background-image: url("../img/ongar-lights.jpg");
+  background-size: cover;
+  background-position: center center; }
+
+#new-post3 {
+  background-image: url("../img/mike-portfolio-image.jpg");
+  background-size: cover;
+  background-position: center center; }
+
+#new-post4 {
+  background-image: url("../img/mike-portfolio-image.jpg");
   background-size: cover;
   background-position: center center; }
 
