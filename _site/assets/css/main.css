@@ -246,6 +246,14 @@ body {
     height: 100vh;
     overflow: hidden; }
 
+::-moz-selection {
+  color: #e74c3c;
+  background: #333333; }
+
+::selection {
+  color: #e74c3c;
+  background: #333333; }
+
 p {
   font-family: 'open_sanslight';
   font-size: 14px;
@@ -261,7 +269,8 @@ a {
   font-size: 50px;
   color: #333;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  text-align: center; }
 
 .top-section h4 {
   font-weight: 100;
@@ -574,6 +583,37 @@ hr {
   .work-intro span {
     color: #e74c3c;
     font-size: 18px; }
+    .work-intro span:hover {
+      -webkit-animation: heart-beat 700ms infinite ease-in-out;
+      cursor: none; }
+
+@-webkit-keyframes heart-beat {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  50% {
+    -webkit-transform: scale(2);
+    transform: scale(2); }
+  75% {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+
+@keyframes heart-beat {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  50% {
+    -webkit-transform: scale(2);
+    transform: scale(2); }
+  75% {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
 
 @media (max-width: 1027px) {
   .large-image-container {
@@ -695,7 +735,7 @@ nav {
   opacity: 0;
   -webkit-transform: translateX(-70%);
   transform: translateX(-70%);
-  transition: all 1s ease-in-out; }
+  transition: all .8s ease-in-out; }
   .footer.footer-showing {
     opacity: 1;
     -webkit-transform: translateX(0);
@@ -761,7 +801,11 @@ nav {
   .logo-container {
     display: block;
     width: 100%;
-    margin: 20px 0; } }
+    margin: 20px 0; }
+  .top-section {
+    padding: 15px 0;
+    display: block;
+    width: 100%; } }
 
 @media (max-width: 480px) {
   .top-section {
@@ -1191,29 +1235,6 @@ textarea {
     -webkit-transform: scale(1);
     transform: scale(1); } }
 
-.blog-item {
-  width: 70%;
-  margin: 100px 0 15px 15%;
-  height: auto; }
-  .blog-item:nth-child(1) {
-    margin-top: 25px !important; }
-
-.date {
-  height: 100px;
-  padding: 0 10px;
-  text-align: center;
-  color: #ffffff;
-  background-color: #e74c3c; }
-
-.cal-day {
-  font-family: 'slab_serifregular';
-  font-size: 32px; }
-
-.cal-year {
-  display: block;
-  padding: 0 0 4px 0;
-  font-size: 12px; }
-
 .blog-item-text {
   width: 90%;
   padding: 10px;
@@ -1383,28 +1404,8 @@ textarea {
   background-size: cover;
   background-position: center center; }
 
-#example {
-  background-image: url("../img/example.jpg");
-  background-size: cover;
-  background-position: center center; }
-
-#new-post {
-  background-image: url("../img/new-post.jpg");
-  background-size: cover;
-  background-position: center center; }
-
-#new-post2 {
-  background-image: url("../img/ongar-lights.jpg");
-  background-size: cover;
-  background-position: center center; }
-
-#new-post3 {
-  background-image: url("../img/mike-portfolio-image.jpg");
-  background-size: cover;
-  background-position: center center; }
-
-#new-post4 {
-  background-image: url("../img/mike-portfolio-image.jpg");
+#web-tool {
+  background-image: url("../img/unbeatable-web-tool.jpg");
   background-size: cover;
   background-position: center center; }
 
@@ -1464,6 +1465,19 @@ textarea {
       margin: 0 auto; }
   .sub-container {
     width: 90%; } }
+
+@media (max-width: 678px) {
+  .post-100, .post-50, .post-30, .post-70 {
+    width: 100%; }
+  .posts-container {
+    width: 92%;
+    height: auto;
+    margin-left: 4%;
+    border-radius: 5px; }
+  .coming-soon-text {
+    width: 92%; }
+  .blog-intro {
+    width: 92%; } }
 
 /*!
  * animate.css -http://daneden.me/animate

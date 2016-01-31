@@ -1,0 +1,56 @@
+@font-face {
+  font-family: 'merriweatherultrabold_italic';
+  src: url("../fonts/merriweather-ultrabdit-webfont.eot");
+  src: url("../fonts/merriweather-ultrabdit-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/merriweather-ultrabdit-webfont.woff2") format("woff2"), url("../fonts/merriweather-ultrabdit-webfont.woff") format("woff"), url("../fonts/merriweather-ultrabdit-webfont.ttf") format("truetype"), url("../fonts/merriweather-ultrabdit-webfont.svg#merriweatherultrabold_italic") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'merriweather_ultraboldregular';
+  src: url("../fonts/merriweather_ultrabold-webfont.eot");
+  src: url("../fonts/merriweather_ultrabold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/merriweather_ultrabold-webfont.woff2") format("woff2"), url("../fonts/merriweather_ultrabold-webfont.woff") format("woff"), url("../fonts/merriweather_ultrabold-webfont.ttf") format("truetype"), url("../fonts/merriweather_ultrabold-webfont.svg#merriweather_ultraboldregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'open_sanslight';
+  src: url("../fonts/OpenSans-Light-webfont.eot");
+  src: url("../fonts/OpenSans-Light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Light-webfont.woff") format("woff"), url("../fonts/OpenSans-Light-webfont.ttf") format("truetype"), url("../fonts/OpenSans-Light-webfont.svg#open_sanslight") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+body {
+  font-family: "open_sanslight"; }
+
+.container {
+  padding-bottom: 75px; }
+
+.img-container {
+  display: block;
+  width: 320px;
+  height: 320px;
+  margin: 50px auto;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  transform: scale(1);
+  background-color: pink;
+  background-image: url("../img/header-img.jpg");
+  background-size: cover;
+  background-position: left center; }
+  .img-container:hover {
+    transform: scale(1.1); }
+
+h1, h2 {
+  text-align: center;
+  color: #666;
+  font-family: "merriweather_ultraboldregular"; }
+  h1 span, h2 span {
+    border-bottom: 1px solid #666;
+    font-family: "merriweatherultrabold_italic"; }
+
+.text-section {
+  width: 70%;
+  margin: auto; }
+
+a {
+  color: #E74C3C;
+  text-decoration: none;
+  font-weight: 800; }

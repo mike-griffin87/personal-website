@@ -1,33 +1,3 @@
-=open-sans-reg
-  family: 'open_sansregular'
-
-.blog-item
-  width: 70%
-  margin: 100px 0 15px 15%
-  height: auto
-
-  &:nth-child(1)
-    margin-top: 25px!important
-
-.date
-  height: 100px
-  padding: 0 10px
-  text-align: center
-  color: $white
-  background:
-    color: $red
-
-.cal-day
-  font:
-    family: 'slab_serifregular'
-    size: 32px
-
-.cal-year
-  display: block
-  padding: 0 0 4px 0
-  font:
-    size: 12px
-
 .blog-item-text
   width: 90%
   padding: 10px
@@ -68,7 +38,12 @@
     content: ' > >'
 
 #mc_embed_signup
-  padding: 10% 0 0 0
+  padding: 50px 0
+  margin: 10% 0 5% 0
+  width: 100%
+  left: 0
+  background:
+    color: $light-grey
 
 .sub-container
   margin: auto
@@ -211,33 +186,9 @@
     size: cover
     position: center center
 
-#example
+#web-tool
   background:
-    image: url('../img/example.jpg')
-    size: cover
-    position: center center
-
-#new-post
-  background:
-    image: url('../img/new-post.jpg')
-    size: cover
-    position: center center
-
-#new-post2
-  background:
-    image: url('../img/ongar-lights.jpg')
-    size: cover
-    position: center center
-
-#new-post3
-  background:
-    image: url('../img/mike-portfolio-image.jpg')
-    size: cover
-    position: center center
-
-#new-post4
-  background:
-    image: url('../img/mike-portfolio-image.jpg')
+    image: url('../img/unbeatable-web-tool.jpg')
     size: cover
     position: center center
 
@@ -307,3 +258,7 @@
 
   .sub-container
     width: 90%
+
+@media (max-width: 685px)
+  .post-100, .post-50, .post-30, .post-70
+    width: 100%

@@ -19,7 +19,6 @@ nav
     margin: 0
     padding: 0
     list-style: none
-    //background: green
 
     li
       display: inline-block
@@ -48,12 +47,14 @@ nav
   display: block
   width: 95%
   margin: auto
-  padding: 0 0 750px 0
+  padding: 0 0 125px 0
   opacity: 0
-  transition: all .25s ease-in-out
+  transform: translateX(-70%)
+  transition: all .8s ease-in-out
 
   &.footer-showing
     opacity: 1
+    transform: translateX(0)
 
   nav
     width: 100%
@@ -128,9 +129,15 @@ nav
     width: 100%
     margin: 20px 0
 
+  .top-section
+    padding: 15px 0
+    display: block
+    width: 100%
+
 @media (max-width: 480px)
   .top-section
     display: block !important
+
 
   .logo-container
     text-align: center

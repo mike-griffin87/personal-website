@@ -247,6 +247,20 @@
     font:
       size: 18px
 
+    &:hover
+      -webkit-animation: heart-beat 700ms infinite ease-in-out
+      cursor: none
+
+@keyframes heart-beat
+  0%
+    transform: scale(1)
+  50%
+    transform: scale(2)
+  75%
+    transform: scale(1.5)
+  100%
+    transform: scale(1)
+
 
 @media (max-width: 1027px)
 

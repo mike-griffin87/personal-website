@@ -7,8 +7,8 @@
 {% if page.type =="post" %}{{ page.styles }}{{ page.JS }}{% endif %}
 </head>
 <body>
-  
-  {{content}}
 
+  {{content}}
+  {% include next-prev-blog.html %}
 </body>
 </html>

@@ -1,0 +1,10 @@
+<div class="next-prev-blog-buttons">
+
+<nav>
+  <ul>
+    {% if page.previous %}<li class="prev-blog"><a href="{{ page.previous.url }}">Prev</a></li>{% endif %}
+    {% if page.next %}<li class="next"><a href="{{ page.next.url }}">Next</a></li>{% endif %}
+  </ul>
+</nav>
+
+</div>

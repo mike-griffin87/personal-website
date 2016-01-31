@@ -105,7 +105,7 @@ $('body,html').fadeIn(350);
 $('.work-item').each(function(i){
   setTimeout(function(){
     $('.work-item').eq(i).fadeIn(1000);
-  }, 150 * (i+1));
+  }, 200 * (i+1));
 });
 
 //SLIDE OUT BLOG COMING SOON MESSAGE
@@ -119,6 +119,8 @@ $(window).scroll(function(){
   var windowScroll = $(this).scrollTop();
   if(windowScroll > $('.footer').offset().top - ($(window).height() * 0.9)){
     $('.footer').addClass('footer-showing');
+  } else {
+    $('.footer').removeClass('footer-showing');
   }
 });
 
