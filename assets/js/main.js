@@ -114,7 +114,7 @@ $('.coming-soon-text').on('click', function(){
 });
 
 
-
+//ANIMATE FOOTER WHEN BROWSER TOP IS AT CERTAIN POINT
 $(window).scroll(function(){
   var windowScroll = $(this).scrollTop();
   if(windowScroll > $('.footer').offset().top - ($(window).height() * 0.9)){
@@ -122,6 +122,13 @@ $(window).scroll(function(){
   } else {
     $('.footer').removeClass('footer-showing');
   }
+});
+
+$('.my-kitten').on('click', function(){
+  $('.kitten-container').addClass('showing');
+  $('.about-panel-overlay').addClass('show');
+  checkBodyForClass();
+
 });
 
 });
