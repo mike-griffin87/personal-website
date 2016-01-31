@@ -93,10 +93,33 @@ function(){
 $(this).prev('.date').removeClass('animated tada');});
 
 //MOBILE NAV TOGGLE
-
 $('.mobile-nav-toggle').on('click', function(){
   $('.main-nav').toggleClass('is-showing');
   $('.mobile-nav-toggle').toggleClass('is-showing');
+});
+
+//BODY FADE IN
+$('body,html').fadeIn(350);
+
+//FADE IN WORK ITEMS ONE BY ONE
+$('.work-item').each(function(i){
+  setTimeout(function(){
+    $('.work-item').eq(i).fadeIn(1000);
+  }, 150 * (i+1));
+});
+
+//SLIDE OUT BLOG COMING SOON MESSAGE
+$('.coming-soon-text').on('click', function(){
+  $(this).slideUp(350);
+});
+
+
+
+$(window).scroll(function(){
+  var windowScroll = $(this).scrollTop();
+  if(windowScroll > $('.footer').offset().top - ($(window).height() * 0.9)){
+    $('.footer').addClass('footer-showing');
+  }
 });
 
 });

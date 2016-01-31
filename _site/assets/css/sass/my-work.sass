@@ -16,7 +16,8 @@
   margin: 10px
   height: 275px
   overflow: hidden
-  border: 1px solid #333
+  border: 1px solid $grey
+  display: none
 
   &:hover .overlay,
   &:hover  h1,
@@ -51,18 +52,19 @@
   padding: 100px 0 0 0
 
   h1
-    color: #eee
+    color: $light-grey
     margin: 0
     padding: 0
     opacity: 0
     text-transform: uppercase
+    text-align: center
     transition: all .25s ease-in-out
     transition-delay: .18s
     transform: translate(-20%, 0%)
     font:
       family: 'open_sansextrabold'
   p
-    color: #eee
+    color: $light-grey
     margin: 0
     padding: 0
     opacity: 0
@@ -102,7 +104,7 @@
 
 .work-text-container
   text-align: center
-  color: #fff
+  color: $white
   width: 35%
   height: 100vh
   position: fixed
@@ -162,7 +164,7 @@
   font:
     family: 'open_sansregular'
   background:
-    color: #fff
+    color: $white
 
   &:hover
     filter: drop-shadow(0px 0px 8px rgba(0,0,0, .6))
@@ -220,6 +222,30 @@
     image: url('../img/eriu.jpg')
     size: cover
     position: center center
+
+.work-intro
+  text-align: center
+  width: 70%
+  padding: 4% 0 3% 0
+  margin: auto
+
+  p
+    margin: 0
+
+    a
+      display: inline-block
+
+  h1
+    color: $grey
+    margin: 0
+    padding: 0
+    font:
+      family: 'open_sansextrabold'
+
+  span
+    color: $red
+    font:
+      size: 18px
 
 
 @media (max-width: 1027px)
@@ -297,7 +323,7 @@
       opacity: 1
       transform: translate(0%, 0%)
       background:
-        color: rgba(#333, .6)
+        color: rgba($grey, .6)
 
   .work-item-caption
     position: relative
@@ -305,13 +331,13 @@
     margin: auto
 
     h1
-      color: #fff
+      color: $white
       opacity: 1
       transform: translate(0%, 0%)
       font:
         family: 'open_sansextrabold'
         size: 25px
     p
-      color: #fff
+      color: $white
       opacity: 1
       transform: translate(0%, 0%)

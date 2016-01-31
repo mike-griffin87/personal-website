@@ -1,3 +1,6 @@
+=open-sans-reg
+  family: 'open_sansregular'
+
 .blog-item
   width: 70%
   margin: 100px 0 15px 15%
@@ -10,7 +13,7 @@
   height: 100px
   padding: 0 10px
   text-align: center
-  color: #fff
+  color: $white
   background:
     color: $red
 
@@ -34,7 +37,7 @@
 
   &:hover
     background:
-      color: #eee
+      color: $light-grey
 
     & .view-post
       opacity: 1
@@ -47,7 +50,7 @@
     padding: 0
 
 .blog-content
-  color: #333
+  color: $grey
   font:
     size: 18px
 
@@ -57,12 +60,20 @@
   transform: translate(100px, 0)
   float: right
   padding: 10px 15px
-  color: #333
+  color: $grey
   font:
     family: 'open_sansregular'
 
   &:after
     content: ' > >'
+
+#mc_embed_signup
+  padding: 50px 0
+  margin: 10% 0 5% 0
+  width: 100%
+  left: 0
+  background:
+    color: $light-grey
 
 .sub-container
   margin: auto
@@ -72,6 +83,8 @@
     margin: 0
     outline: none
     color: $grey
+    background:
+      color: honeydew
 
     &:focus
       background:
@@ -111,7 +124,7 @@
 .sub-container
   width: 55%
   h1
-    color: #333
+    color: $grey
     font:
       family: 'open_sansextrabold'
 
@@ -120,11 +133,13 @@
   width: 70%
   height: auto
   margin-left: 15%
+  border-radius: 5px
 
 .post
   min-height: 200px
+  min-width: 100px
   position: relative
-  cursor: pointer
+  cursor: url('../img/fa-search-icon.svg'), pointer
   overflow: hidden
 
   &:hover .post-info
@@ -161,7 +176,7 @@
   font-size: 12px
   opacity: 0
   transition: all .25s ease-in-out
-  transition-delay: .05s
+  transition-delay: .08s
   transform: translate(-50%, 0)
 
 .post-title
@@ -185,23 +200,15 @@
 
 .post-70
   width: 70%
-  background:
-    color: green
 
 .post-30
   width: 30%
-  background:
-    color: honeydew
 
 .post-100
   width: 100%
-  background:
-    color: yellow
 
 .post-50
   width: 50%
-  background:
-    color: fuchsia
 
 #nettl
   background:
@@ -214,6 +221,65 @@
     image: url('../img/example.jpg')
     size: cover
     position: center center
+
+#new-post
+  background:
+    image: url('../img/new-post.jpg')
+    size: cover
+    position: center center
+
+#new-post2
+  background:
+    image: url('../img/ongar-lights.jpg')
+    size: cover
+    position: center center
+
+#new-post3
+  background:
+    image: url('../img/mike-portfolio-image.jpg')
+    size: cover
+    position: center center
+
+#new-post4
+  background:
+    image: url('../img/mike-portfolio-image.jpg')
+    size: cover
+    position: center center
+
+.coming-soon-text
+  width: 70%
+  margin: auto
+  color: $grey
+  text-align: center
+  margin-bottom: 0
+  padding: 15px 10px
+  border-radius: 5px
+  cursor: url('../img/close.svg'), pointer
+  background:
+    color: lighten($red, 10%)
+
+  span
+    color: $white
+    font:
+      family: 'open_sanslight'
+      weight: 100
+      size: 14px
+
+.blog-intro
+  width: 70%
+  margin: auto
+  position: relative
+  text-align: center
+  padding: 3% 0 6% 0
+
+  p
+    margin: 0
+
+  h1
+    font-family: 'open_sansextrabold'
+    color: $grey
+    margin: 0
+    padding: 0
 
 
 /*---------- RESPONSIVE STYLES ----------*/
@@ -230,7 +296,7 @@
     flex-direction: column!important
     text-align: center
     background:
-      color: #eee
+      color: $light-grey
 
     &:nth-child(1)
       margin-top: 25px!important

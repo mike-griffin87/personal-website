@@ -12,19 +12,16 @@
 
 <div class="top-section flex">
     <div class="logo-container flex flex-center column">
+      <a href="index.html">
       <h1>Michael Griffin</h1>
       <h4><span><</span> Front-end developer & designer <span>/></span></h4>
+      </a>
     </div>
     <div class="mobile-nav-toggle">
       <span></span>
     </div>
     <nav class="flex flex-center main-nav">
-      <ul>
-        <li><a class="about">about</a></li>
-        <li><a href="{{site.baseurl}}" class="{% if page.url == '/index.html' %}current{% endif %}">work</a></li>
-        <li><a class="{% if page.url == '/blog.html' %}current{% endif %}" href="blog.html">blog</a></li>
-        <li><a class="contact">contact</a></li>
-      </ul>
+      {% include main-nav.html %}
     </nav>
 </div>
 <hr>
@@ -59,6 +56,12 @@
     <input type="submit" class="submit" value="send message" />
   </form>
 </div>
-
+<div class="footer">
+  <nav>
+    <ul>
+      {% include main-nav.html %}
+    </ul>
+  </nav>
+</div>
 </body>
 </html>
