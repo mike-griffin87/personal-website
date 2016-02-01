@@ -53,7 +53,6 @@ function checkBodyForClass (){
       current = $(current).prev('.work-item');
       showWork(current);
       indexCheck(current);
-      console.log(current.index());
     });
     indexCheck(current);
   });
@@ -122,13 +121,6 @@ $(window).scroll(function(){
   } else {
     $('.footer').removeClass('footer-showing');
   }
-});
-
-$('.my-kitten').on('click', function(){
-  $('.kitten-container').addClass('showing');
-  $('.about-panel-overlay').addClass('show');
-  checkBodyForClass();
-
 });
 
 });
