@@ -55,6 +55,6 @@ a {
   text-decoration: none;
   font-weight: 800; }
 
-@ media (max-width: 680px) {
+@media (max-width: 680px) {
   .text-section {
     width: 90%; } }
