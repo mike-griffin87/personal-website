@@ -3,19 +3,19 @@
   id: amorae
   overlayTitle: Amorae Bridal
   role: Web design & development
-  content: Amorae Bridal is an award winning bridal shop located in Essex, United Kingdom. Amorae wanted me to design and build their website from the ground up. Their key requirements included a mobile friendly site, a platform to involve with their brides and an engaging user experience.  I achieved this with a full screen background image on every page with a rotation of images on the home page. These images were supplied by their brides which helped create a continued communication with their clients. To make the user experience more engaging I used CSS3 and jQuery animations to create subtle interactive animations. Check out the <a class="live-site" href="http://www.amoraebridal.co.uk" target="new">live site here</a>.
+  content: Amorae Bridal is an award winning bridal shop located in Essex, United Kingdom. Amorae wanted me to design and build their website from the ground up. Their key requirements included a mobile friendly site, a platform to involve with their brides and an engaging user experience. One of the challenges that came with this project was the sheer mass of images on the site, I foreseen this complication so was able to ensure that all image were meticulously optimised. Check out the <a class="live-site" href="http://www.amoraebridal.co.uk" target="new">live site here</a>.
 
 - title: Copan
   id: copan
   overlayTitle: Copan
   role: Design
-  content: Copan is an extremely popular bar in south Dublin. I designed this TV advert for to market their new deal on craft beers. I used a rustic hipster-esque image to tie in with the colours of their brand and hit home with their target audience.
+  content: Copan is an extremely popular bar in south Dublin. I designed this TV advert to advertise their great new deal on craft beers. I used a rustic hipster-esque background with different shades of brown tie in with the colours of their brand and hit home with their target audience.
 
 - title: Ongar
   id: ongar-logo
   overlayTitle: Ongar
   role: Branding
-  content: I designed a business brochure for the town of Ongar and this is the branding to go with it. They requested something that was "uncluttered, trendy and easily recognisable". I achieved this by using the notable map location pin icon and a muted red colour to make it pop. To remove the main emphasis from the map pin I spit it with the text for the business directory.
+  content: I was commissioned to design a business brochure for the town of Ongar (Essex) and this was the branding that accompanied it. The client requested something that was "uncluttered, trendy and easily recognisable". I achieved this by using the infamous map pin icon and a flat red colour to keep it current and trendy. To remove the main emphasis from the map pin I spit it with the text for the business directory.
 
 - title: Ongar
   id: ongar-lights
