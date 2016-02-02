@@ -1,7 +1,6 @@
-.next-prev-blog-buttons a {
-  text-decoration: none;
+.container {
+  padding-top: 20px;
 }
-
 .next-prev-blog-buttons {
   position: fixed;
   top: 0;
@@ -11,6 +10,11 @@
   background-color: #E74C3C;
   color: #fff;
 }
+
+.next-prev-blog-buttons a {
+  text-decoration: none;
+}
+
 
 .next-prev-blog-buttons ul{
   margin: 0;
