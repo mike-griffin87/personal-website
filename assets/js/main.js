@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+  console.log ("Hello there! Aren't you amazing!");
+
 function checkBodyForClass (){
   if (!$('body').hasClass('no-scroll')) {
   $('body').addClass('no-scroll');
