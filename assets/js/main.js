@@ -1,6 +1,6 @@
-$(document).ready(function(){
+console.log ("Hello there! Aren't you amazing!");
 
-  console.log ("Hello there! Aren't you amazing!");
+$(document).ready(function(){
 
 function checkBodyForClass (){
   if (!$('body').hasClass('no-scroll')) {

@@ -1,3 +1,5 @@
+console.log ("Hello there! Aren't you amazing!");
+
 $(document).ready(function(){
 
 function checkBodyForClass (){
