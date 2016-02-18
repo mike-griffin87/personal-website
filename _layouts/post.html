@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% if page.type =="post" %}{{ page.title }}{% endif %}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<link rel="stylesheet" href="/assets/css/post-nav.css">
+{% if page.type =="post" %}{{ page.styles }}{{ page.JS }}{% endif %}
+
+
+</head>
+<body>
+
+  {{content}}
+  {% include next-prev-blog.html %}
+</body>
+</html>

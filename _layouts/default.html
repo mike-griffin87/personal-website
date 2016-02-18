@@ -2,26 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Personal Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mike Griffin | Designer & Developer</title>
 <link rel="stylesheet" href="assets/css/main.css">
-<script type="text/javascript" src="assets/js/jquery-2.1.3.min.js"></script>
-<script type="text/javascript" src="assets/js/min/main.js"></script>
+<link rel="shortcut icon" href="http://www.michaelgriffin.me/favicon.ico?v=2" />
 </head>
 <body>
 
 <div class="top-section flex">
     <div class="logo-container flex flex-center column">
+      <a href="index.html">
       <h1>Michael Griffin</h1>
-      <h4>I <span class="fa fa-heart heart"></span> creating stuff & things</h4>
+      <h4><span><</span> Front-end developer & designer <span>/></span></h4>
+      </a>
     </div>
-
-    <nav class="flex flex-center">
-      <ul>
-        <li><a class="about">about</a></li>
-        <li><a href="{{site.baseurl}}" class="{% if page.url == '/index.html' %}current{% endif %}">work</a></li>
-        <li><a class="" href="blog.html">blog</a></li>
-        <li><a class="contact">contact</a></li>
-      </ul>
+    <div class="mobile-nav-toggle">
+      <span></span>
+    </div>
+    <nav class="flex flex-center main-nav">
+      {% include main-nav.html %}
     </nav>
 </div>
 <hr>
@@ -33,38 +32,49 @@
 <div class="about-container">
   <div class="close fa fa-times"></div>
     <div class="about-image">
-        <ul>
-          <a href="https://dribbble.com/Mike-Griffin" target="new"><li class="fa fa-dribbble"></li></a>
-          <a href="https://www.instagram.com/mikegriffin87/" target="new"><li class="fa fa-instagram"></li></a>
-          <a href="https://twitter.com/MikeGriffin87" target="new"><li class="fa fa-twitter"></li></a>
-          <a href="mailto:michaelgriffin87@me.com"><li class="fa fa-envelope"></li></a>
-        </ul>
+        {% include social-nav.html %}
   </div>
 
   <div class="about-text">
     <h2>Hello</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel illo tempore corporis beatae repellat, labore voluptatibus ducimus fuga saepe consequatur possimus natus tenetur ab quos libero, nostrum cupiditate tempora temporibus.</p>
+    <p>I'm Mike, a front-end developer & designer. I studied Digital Media at Edinburgh Napier University and gratuated in 2010. I have lived in London, Edinburgh, Australia and I'm currently back at home in Dublin, Ireland. I have been self employed for a number of years and during that time I provided small to medium businesses with print and interactive solutions. In 2015 I started working for <a class="nettl-link" href="http://www.nettl.co.uk/ie" target="new">Nettl</a> as a Brand Stylist. In my free time I like to watch Boxing, annoy my kitten and design posts for my <a href="http://www.michaelgriffin.me/blog">blog</a>.</p>
   </div>
-  <div class="button resume-button">Download My Résumé</div>
+  <div class="button resume-button"><a href="mailto:michaelgriffin87.com">Request My Résumé</a></div>
+  <div class="mobile-social-nav">{% include social-nav.html %}</div>
 </div>
 
 <div class="contact-section">
   <div class="close fa fa-times"></div>
-  <h2>Let's get social... <br></h2>
-  <p class="lets-get-social"><a target="new" href="https://www.youtube.com/watch?v=itvvFfeLh84">(social)</a></p>
-  <ul>
-    <a href="https://dribbble.com/Mike-Griffin" target="new"><li class="fa fa-dribbble"></li></a>
-    <a href="https://www.instagram.com/mikegriffin87/" target="new"><li class="fa fa-instagram"></li></a>
-    <a href="https://twitter.com/MikeGriffin87" target="new"><li class="fa fa-twitter"></li></a>
-    <a href="mailto:michaelgriffin87@me.com"><li class="fa fa-envelope"></li></a>
-  </ul>
-  <div class="contact-form">
-    <input type="text" placeholder="what should I call you?">
-    <input type="email" placeholder="you'll need an email address">
-    <textarea class="message" type="text" placeholder="whisper sweet nothings..."></textarea><br />
-    <button class="submit">send message</button>
-  </div>
+  <h2>Say Hello... <br></h2>
+  {% include social-nav.html %}
+  <form class="contact-form" method="POST" action="http://formspree.io/michaelgriffin87@me.com">
+    <input id="name-input" name="Name" type="text" placeholder="what should I call you?" required>
+    <input id="email-input" type="email" placeholder="you'll need an email address" name="E-mail" required>
+    <textarea id="message-input" class="message" type="text" placeholder="whisper sweet nothings..." name="Message" required></textarea><br />
+    <input type="submit" class="submit" value="send message" />
+  </form>
 </div>
+<div class="footer">
+  <nav>
+    <ul>
+      {% include main-nav.html %}
+    </ul>
+  </nav>
+</div>
+
+<script type="text/javascript" src="assets/js/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="assets/js/min/main.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58457285-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 
 </body>
 </html>

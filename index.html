@@ -2,21 +2,29 @@
 layout: default
 ---
 
+<div class="work-intro"><h1>The Goods!</h1><p>Check out some of my work. Below you'll find a selection of handpicked print and interactive projects. If you would like to see more of my work you can check out my <a href="blog.html">blog</a>. Enjoy and have a nice day! <span class="fa fa-heart"></span></p></div>
+
 <div class="text"></div>
 <div class="work-wrapper">
 
-  <div class="large-image-container">
-    <div class="close-mobile-work-image fa fa-times"></div>
-  </div>
-
-  <div class="work-text-container">
-    <div class="close-work-large-container fa fa-times"></div>
-    <div class="project-text"></div>
-    <div class="next-prev-project-buttons flex flex-center row">
-      <span class="project-buttons prev-button">Previous Project</span>
-      <span class="project-buttons next-button">Next Project</span>
+    <div class="large-image-container">
+      <div class="close-mobile-work-image fa fa-times"></div>
     </div>
-  </div>
+
+    <div class="work-text-container">
+      <div class="close-work-large-container fa fa-times"></div>
+      <div class="project-text"></div>
+      <div class="mobile-project-buttons flex flex-center">
+        <span class="mobile-prev fa fa-angle-left"></span>
+        <span class="mobile-next fa fa-angle-right"></span>
+      </div>
+      <div class="next-prev-project-buttons flex flex-center row">
+        <span class="project-buttons prev-button">Previous Project</span>
+        <span class="project-buttons next-button">Next Project</span>
+      </div>
+    </div>
+
+
 
   <ul class="flex row flex-center">
     {% for workItem in .site.data.work-content %}
@@ -36,7 +44,5 @@ layout: default
 {% endfor %}
 
   </ul>
-
-</div>
 
 </div>

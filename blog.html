@@ -2,20 +2,22 @@
 layout: default
 ---
 
-<div class="blog-wrapper">
-{% for blog in site.posts %}
-  <div class="blog-item flex">
-    <div class="date flex flex-center column">
-      <span class="cal-day">{{blog.day}}</span>
-      <span class="cal-year">{{blog.year}}</span>
-    </div>
+<h4 class="coming-soon-text">As this site is new the content below is in the process of being populated, check back soon for more and sign up so you don't miss out.<br><span>click to dismiss</span></h4>
+<div class="blog-intro"><h1>A closer look...</h1><p>Welcome, this is my blog. Below is a mixture of both personal and professinal entries. The purpose of this blog is to not only record aspects of my life and work but to also help me grow my design and development skills</p></div>
 
-    <a href="{{blog.source}}"><div class="blog-item-text">
-      <span class="blog-title"><h2>{{blog.title}}</h2></span>
-      <span class="blog-content"><p>{{blog.excerpt}}</p></span>
-      <span class="view-post">View Post</span>
-    </div></a>
-  </div>
-{% endfor %}
-
+<div class="posts-container flex row wrap">
+  {% for blog in site.posts %}
+  <a  href="{{blog.url}}" target="new" class="post {{blog.width}}" id="{{blog.cssID}}">
+      <div class="post-info flex-center flex column">
+        <div class="post-type flex flex-center column">
+          <span class="fa {{blog.icon}} post-type-icon"></span>
+          <span class="post-type-text">{{blog.sub-title}}</span>
+        </div>
+        <div class="post-title">{{blog.title}}<span class="post-date">{{blog.date | date: "%b %-d, %Y" }}</span>
+        </div>
+      </div>
+  </a>
+  {% endfor %}
 </div>
+
+{% include subscribe.html %}

@@ -16,10 +16,11 @@
   margin: 10px
   height: 275px
   overflow: hidden
-  border: 1px solid #333
+  border: 1px solid $grey
+  display: none
 
   &:hover .overlay,
-  &:hover .work-item-caption h1,
+  &:hover  h1,
   &:hover .work-item-caption p
     transform: translate(0%, 0%)
     opacity: 1
@@ -37,7 +38,7 @@
   .overlay
     width: 100%
     height: 100%
-    cursor: url('../img/fa-search-icon.png'), pointer
+    cursor: url('../img/fa-search-icon.svg'), pointer
     position: absolute
     z-index: 2
     opacity: 0
@@ -51,18 +52,19 @@
   padding: 100px 0 0 0
 
   h1
-    color: #eee
+    color: $light-grey
     margin: 0
     padding: 0
     opacity: 0
     text-transform: uppercase
+    text-align: center
     transition: all .25s ease-in-out
     transition-delay: .18s
     transform: translate(-20%, 0%)
     font:
       family: 'open_sansextrabold'
   p
-    color: #eee
+    color: $light-grey
     margin: 0
     padding: 0
     opacity: 0
@@ -84,12 +86,11 @@
   overflow: hidden
   top: 0
   left: 0
-  z-index: 3
+  z-index: 4
   opacity: 0
   transform: translate(-100%, 0%)
   transition: all .25s ease
   background:
-    color: green
     size: cover
     position: center center
 
@@ -103,7 +104,7 @@
 
 .work-text-container
   text-align: center
-  color: #fff
+  color: $white
   width: 35%
   height: 100vh
   position: fixed
@@ -144,6 +145,7 @@
 
 .project-text
   margin-top: 100px
+  height: 40%
 
 .next-prev-project-buttons
   margin-top: 125px
@@ -162,7 +164,7 @@
   font:
     family: 'open_sansregular'
   background:
-    color: #fff
+    color: $white
 
   &:hover
     filter: drop-shadow(0px 0px 8px rgba(0,0,0, .6))
@@ -203,6 +205,12 @@
     size: cover
     position: center center
 
+#barclay
+  background:
+    image: url('../img/barclay.jpg')
+    size: cover
+    position: center center
+
 #slievemore
   background:
     image: url('../img/slievemore.jpg')
@@ -214,3 +222,136 @@
     image: url('../img/eriu.jpg')
     size: cover
     position: center center
+
+.work-intro
+  text-align: center
+  width: 70%
+  padding: 4% 0 3% 0
+  margin: auto
+
+  p
+    margin: 0
+
+    a
+      display: inline-block
+
+  h1
+    color: $grey
+    margin: 0
+    padding: 0
+    font:
+      family: 'open_sansextrabold'
+
+  span
+    color: $red
+    font:
+      size: 18px
+
+    &:hover
+      -webkit-animation: heart-beat 700ms infinite ease-in-out
+      cursor: none
+
+@keyframes heart-beat
+  0%
+    transform: scale(1)
+  50%
+    transform: scale(2)
+  75%
+    transform: scale(1.5)
+  100%
+    transform: scale(1)
+
+
+@media (max-width: 1027px)
+
+  .large-image-container
+    width: 100%
+    height: 75vh
+    position: fixed
+    top: 0
+    display: block
+    overflow: hidden
+    background:
+      color: blue
+      size: contain
+      position: center center
+      repeat: no-repeat
+      color: rgba(0,0,0,.9)
+
+  .work-text-container
+    width: 100%
+    top: 75vh
+    bottom: 0
+    position: fixed
+    display: block
+
+    h1
+      margin: 0
+      padding: 0
+      text-transform: uppercase
+      letter-spacing: 1px
+      font:
+        family: 'open_sansregular'
+        size: 20px
+
+    h4
+      margin: 0
+      padding: 0
+      text-transform: uppercase
+      font:
+        weight: 100
+        size: 12px
+
+    p
+      padding: 15px 25px
+      display: none
+
+  .project-text
+    margin-top: 5px
+
+  .next-prev-project-buttons
+    display: none
+
+  .work-item
+    width: 47%
+
+  .work-wrapper
+
+    & .close-work-large-container
+      display: none
+
+  .project-text
+    margin-top: 5px
+    height: auto
+
+@media (max-width: 768px)
+
+    .work-item
+      width: 97%
+
+@media (max-width: 480px)
+
+  .work-item
+
+    .overlay
+      opacity: 1
+      transform: translate(0%, 0%)
+      background:
+        color: rgba($grey, .6)
+
+  .work-item-caption
+    position: relative
+    padding: 100px 0 0 0
+    margin: auto
+
+    h1
+      color: $white
+      opacity: 1
+      transform: translate(0%, 0%)
+      font:
+        family: 'open_sansextrabold'
+        size: 25px
+    p
+      color: $white
+      opacity: 1
+      transform: translate(0%, 0%)
